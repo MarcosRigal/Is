@@ -1,4 +1,4 @@
-[![IS.](https://zimbronapps.com/wp-content/uploads/2017/08/Ingenier%C3%ADa-de-Software-1024x700.png)]
+![IS.](https://zimbronapps.com/wp-content/uploads/2017/08/Ingenier%C3%ADa-de-Software-1024x700.png)
 
 Este es mi primer proyecto de GitHub en el que he aprendido lenguaje Markdown.
 
