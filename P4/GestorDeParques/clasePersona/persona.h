@@ -7,4 +7,4 @@ class Persona{
 
     //Operaciones y funciones de la clase
 
-}
+};

@@ -7,4 +7,4 @@ class Trabajador{
 
     //Operaciones y funciones de la clase
 
-}
+};

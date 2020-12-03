@@ -7,4 +7,4 @@ class Sendero{
 
     //Operaciones y funciones de la clase
 
-}
+};

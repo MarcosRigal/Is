@@ -7,4 +7,4 @@ class Senderista{
 
     //Operaciones y funciones de la clase
 
-}
+};
