@@ -1,5 +1,6 @@
+#ifndef ADMINISTRATIVO_H
+#define ADMINISTRATIVO_H
 #include <iostream>
-
 
 class Administrativo{
     private:
@@ -10,4 +11,5 @@ class Administrativo{
 
     //Operaciones y funciones de la clase
 
-}
+};
+#endif

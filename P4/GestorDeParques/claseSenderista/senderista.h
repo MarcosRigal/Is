@@ -1,3 +1,5 @@
+#ifndef SENDERISTA_H
+#define SENDERISTA_H
 #include <iostream>
 #include <string>
 #include <list>
@@ -15,3 +17,4 @@ class Senderista{
     //Operaciones y funciones de la clase
 
 };
+#endif

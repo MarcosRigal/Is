@@ -1,3 +1,5 @@
+#ifndef PARQUE_H
+#define PARQUE_H
 #include <list>
 #include <string>
 using namespace std;
@@ -23,3 +25,4 @@ class Parque{
     //Operaciones y funciones de la clase
 
 };
+#endif

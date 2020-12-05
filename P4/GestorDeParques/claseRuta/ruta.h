@@ -1,3 +1,5 @@
+#ifndef RUTA_H
+#define RUTA_H
 #include <string>
 #include <list>
 using namespace std;
@@ -23,3 +25,4 @@ class Ruta{
     //Operaciones y funciones de la clase
 
 };
+#endif

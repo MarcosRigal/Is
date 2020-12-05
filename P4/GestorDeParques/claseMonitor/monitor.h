@@ -1,3 +1,5 @@
+#ifndef MONITOR_H
+#define MONITOR_H 
 #include <iostream>
 using namespace std;
 
@@ -13,3 +15,4 @@ class Monitor{
     //Operaciones y funciones de la clase
 
 };
+#endif
