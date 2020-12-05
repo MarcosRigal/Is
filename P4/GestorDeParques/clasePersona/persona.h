@@ -1,7 +1,14 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 class Persona{
     private:
 
-    //Variables de la clase
+    string name_;
+    string surnames_;
+    string dni_;
+    string birthday_;
 
     public:
 

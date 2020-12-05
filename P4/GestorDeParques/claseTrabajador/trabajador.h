@@ -1,7 +1,12 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 class Trabajador{
     private:
 
-    //Variables de la clase
+    string email_;
+    string address;
 
     public:
 

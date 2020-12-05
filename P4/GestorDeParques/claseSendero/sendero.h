@@ -1,7 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 class Sendero{
     private:
 
-    //Variables de la clase
+    int difficultyLevel_;
+    string name_;
+    int parkID_;
+    int trailID_;
+    bool trailStatus;
 
     public:
 

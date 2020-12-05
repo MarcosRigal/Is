@@ -1,3 +1,6 @@
+#include <iostream>
+
+
 class Administrativo{
     private:
 

@@ -1,7 +1,12 @@
+#include <iostream>
+using namespace std;
+
 class Monitor{
     private:
 
-    //Variables de la clase
+    int phoneNumber_;
+    float workedHours_;
+    bool status_;
 
     public:
 
