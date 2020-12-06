@@ -4,7 +4,7 @@
 #include <list>
 using namespace std;
 
-class Ruta{
+class Ruta:/*public Sendero*/{
     private:
    
     string adaptations_;
@@ -16,13 +16,30 @@ class Ruta{
     string modality_;
     string name_;
     int numberOfPlaces_;
-    list excursionistRegistered_;
+    list <Excursionist> excursionistRegistered_;
     int parkID_;
+    int routeID_;
+    list <Trails> traversedTrail_;
+    list <Incidence> incidences_;
 
 
     public:
 
-    //Operaciones y funciones de la clase
+    Ruta(string dniMonitor,int parkID, int routeID, list traversedTrail, int numberOfPlaces);
+    inline string getAdaptations() const {return adaptations_;};
+    inline string getDniMonitor() const {return dniMonitor_;};
+    inline string getDniMonitorAlternate() const {return dniMonitorAlternate_;};
+    inline int getDuration() const {return duration_;};
+    inline bool getExclusiveness() const {return exclusiveness_;};
+    inline list<Indicende> getIncidences() const {return list<Indicence>;};
+    inline float getLength() const {return length_;};
+    inline string getModality() const {return modality_;};
+    inline string getName() const {return name_;};
+    inline int getNumberOfPlaces() const {return numberOfPlaces_;};
+    inline list<Excursionist> getExcursionistRegistered() const {return list<Excursionist>;};
+    inline int getParkID() const {return parkID_;};
+    inline int getRouteID() const {return routeID_;};
+    inline list<Trails> getTraversedTrail() const {return list<Trails>;};
 
 };
 #endif
