@@ -8,10 +8,10 @@
 #include "administrativo.h"
 #include <list>
 
-bool existExcursionist(string dni, list<Senderista> listOfExcursionists);
-bool existPark(int parkID, list<Parque> listOfParks);
-bool existRoute(int parkID, int routeID, list<Parque> listOfParks);
-bool existTrail(int parkID, int trailID, list<Parque> listOfParks);
+bool existExcursionist(string dni);
+bool existPark(int parkID);
+bool existRoute(int parkID, int routeID);
+bool existTrail(int parkID, int trailID);
 bool existMonitor(string dni, list<Monitor> listOfMonitors);
 bool existAdministrator(string dni, list<Administrativo> listOfAdministrators);
 bool loadSystem();

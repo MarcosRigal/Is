@@ -10,7 +10,7 @@ bool Sendero::setDifficultyLevel(int const difficultyLevel){
 }
 
 bool Sendero::setParkID(int const parkID){
-    if (/* Parque existe */){
+    if (existPark(parkID)){
         parkID_ = parkID;
         return true;
     }
@@ -18,7 +18,7 @@ bool Sendero::setParkID(int const parkID){
 }
 
 bool Sendero::setTrailID(int const trailID){
-    if (/* Sendero existe */){                                  //Retornará falso si le intentamos asignar un ID de un sendero que ya existe
+    if (existTrail(trailID)){                                  //Retornará falso si le intentamos asignar un ID de un sendero que ya existe
         return false;
     }
     trailID_ = trailID;

@@ -2,6 +2,8 @@
 #define SENDERO_H
 #include <iostream>
 #include <string>
+#include "systemFunctions.h"
+#include "system.cc"
 using namespace std;
 
 class Sendero{
