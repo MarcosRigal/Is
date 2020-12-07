@@ -7,11 +7,11 @@ using namespace std;
 class Sendero{
     private:
 
-        int difficultyLevel_;
-        string name_;
-        int parkID_;
-        int trailID_;
-        bool trailStatus_;
+        int difficultyLevel_;   //Nivel de dificultad del 1 al 10
+        string name_;           //Nombre del sendero
+        int parkID_;            //ID del parque al que pertenece
+        int trailID_;           //ID del sendero
+        bool trailStatus_;      //Estado del sendero (disponible o deshabilitado)
 
     public:
 
@@ -29,11 +29,9 @@ class Sendero{
         bool setDifficultyLevel(int const difficultyLevel);
         inline bool setName(string const name) { name_ = name; }
 
-        /* Para implementarla necesito tener hecha la clase parque
-        bool setParkID(int const parkID); */
+        bool setParkID(int const parkID); /* Falta comprobar si el parque existe o no */
 
-        /*Para implementarla necesito tener el vector/lista de senderos
-        bool setTrailID(int const trailID); */
+        bool setTrailID(int const trailID); /* Falta comprobar si el sendero ya existe o no */
         
         inline bool setTrailStatus(bool const trailStatus) { trailStatus_ = trailStatus; }
 

@@ -1,10 +1,26 @@
 #include "sendero.h"
 
 bool Sendero::setDifficultyLevel(int const difficultyLevel){
-    if (difficultyLevel<1 || difficultyLevel>10){
+    if (difficultyLevel<1 || difficultyLevel>10){               //Retornamos falso si el nivel de dificultad no esta entre 1 y 10
         return false;
     }
 
     difficultyLevel_ = difficultyLevel;
+    return true;
+}
+
+bool Sendero::setParkID(int const parkID){
+    if (/* Parque existe */){
+        parkID_ = parkID;
+        return true;
+    }
+    return false;
+}
+
+bool Sendero::setTrailID(int const trailID){
+    if (/* Sendero existe */){                                  //Retornará falso si le intentamos asignar un ID de un sendero que ya existe
+        return false;
+    }
+    trailID_ = trailID;
     return true;
 }
