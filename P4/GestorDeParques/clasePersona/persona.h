@@ -24,9 +24,7 @@ class Persona{
 
         bool setName(string const name) { name_ = name; }
         bool setSurname(string const surnames) { surnames_ = surnames; }
-
-        bool setDni(string const dni);  /* Falta implementar la funcion que compruebe si el dni es correcto o no*/
-
+        bool setDni(string const dni);
         bool setBirthday(string const birthday) { birthday_ = birthday; }
 };
 #endif

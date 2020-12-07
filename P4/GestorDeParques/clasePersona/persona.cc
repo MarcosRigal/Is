@@ -1,7 +1,7 @@
 #include "persona.h"
 
 bool Persona::setDni(string const dni) { 
-    if (/* Dni existe */){
+    if (dniIsValid(dni)){
         dni_ = dni;
         return true;  
     }
