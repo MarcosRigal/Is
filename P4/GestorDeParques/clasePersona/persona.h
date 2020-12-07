@@ -2,6 +2,7 @@
 #define PERSONA_H
 #include <iostream>
 #include <string>
+#include "systemFunctions.h"
 using namespace std;
 
 class Persona{
