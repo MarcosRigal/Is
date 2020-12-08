@@ -2,7 +2,6 @@
 #define SENDERO_H
 #include <iostream>
 #include <string>
-#include "../P4/GestorDeParques/systemFunctions/systemFunctions.h"
 
 using namespace std;
 
@@ -17,10 +16,7 @@ class Sendero{
 
     public:
 
-        Sendero(int parkID, int trailID){
-            parkID_ = parkID;
-            trailID_ = trailID;
-        }
+        Sendero(int parkID, int trailID){parkID_ = parkID; trailID_ = trailID;}
 
         inline int getDifficultyLevel() const { return difficultyLevel_; }
         inline string getName() const { return name_; }
@@ -29,10 +25,10 @@ class Sendero{
         inline bool getTrailStatus() const { return trailStatus_; }
 
         bool setDifficultyLevel(int const difficultyLevel);
-        inline bool setName(string const name) { name_ = name; }
+        inline bool setName(string const name) {if(name.empty()){return false;} name_ = name; return true;}
         bool setParkID(int const parkID); /* Falta comprobar si el parque existe o no */
-        bool setTrailID(int const trailID); /* Falta comprobar si el sendero ya existe o no */
-        inline bool setTrailStatus(bool const trailStatus) { trailStatus_ = trailStatus; }
+        bool setTrailID(int const &parkID,int const &trailID); /* Falta comprobar si el sendero ya existe o no */
+        inline bool setTrailStatus(bool const trailStatus) {trailStatus_ = trailStatus; return true;}
 
 };
 #endif

@@ -2,18 +2,23 @@
 #define SYSTEM_FUNCTIONS_H
 #include <iostream>
 #include <string>
-#include "../P4/GestorDeParques/claseParque/parque.h"
-#include "../P4/GestorDeParques/claseMonitor/monitor.h"
-#include "../P4/GestorDeParques/claseSenderista/senderista.h"
-#include "../P4/GestorDeParques/claseAdministrativo/administrativo.h"
 #include <list>
+using namespace std;
+
+class Monitor;
+
+class Senderista;
+
+class Parque;
+
+class Administrativo;
 
 bool existExcursionist(string dni);
 bool existPark(int parkID);
 bool existRoute(int parkID, int routeID);
 bool existTrail(int parkID, int trailID);
-bool existMonitor(string dni, list<Monitor> listOfMonitors);
-bool existAdministrator(string dni, list<Administrativo> listOfAdministrators);
+bool existMonitor(string dni, list<Monitor*> listOfMonitors);
+bool existAdministrator(string dni, list<Administrativo*> listOfAdministrators);
 bool loadSystem();
 int placesLeft(int parkID, int routeID);
 bool saveSystem();

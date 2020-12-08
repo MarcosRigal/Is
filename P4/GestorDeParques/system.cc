@@ -1,4 +1,4 @@
-#include "systemFunctions.h"
+#include "../systemFunctions/systemFunctions.h"
 using namespace std;
 
 int main()
@@ -7,6 +7,8 @@ int main()
    list<Senderista> listOfExcursionists;
    list<Administrativo> listOfMonitors;
    list<Monitor> listOfAdministrators;
+
+   printLogin();
 
    return 0;
 }

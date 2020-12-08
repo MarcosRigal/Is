@@ -1,7 +1,7 @@
 #ifndef MONITOR_H
 #define MONITOR_H 
 #include <iostream>
-#include <trabajador.h>
+#include "../claseTrabajador/trabajador.h"
 using namespace std;
 
 class Monitor : public Trabajador

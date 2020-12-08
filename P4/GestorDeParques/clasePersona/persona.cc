@@ -1,3 +1,4 @@
+#include "../systemFunctions/systemFunctions.h"
 #include "persona.h"
 
 bool Persona::setDni(string const dni) { 

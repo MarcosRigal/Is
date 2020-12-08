@@ -2,7 +2,6 @@
 #define PERSONA_H
 #include <iostream>
 #include <string>
-#include "systemFunctions.h"
 using namespace std;
 
 class Persona{
@@ -15,16 +14,17 @@ class Persona{
 
     public:
 
-        inline Persona(string dni){ dni_ = dni; }
+        inline Persona(string dni){setDni(dni);}
 
         inline string getName() const { return name_; }
         inline string getSurname() const { return surnames_; }
         inline string getDni() const { return dni_; }
         inline string getBirthday() const { return birthday_; }
 
-        bool setName(string const name) { name_ = name; }
-        bool setSurname(string const surnames) { surnames_ = surnames; }
+        bool setName(string const name) {if(name.empty()){return false;}name_ = name; return true;}
+        bool setSurname(string const surnames) {if(surnames.empty()){return false;} surnames_ = surnames; return true;}
         bool setDni(string const dni);
-        bool setBirthday(string const birthday) { birthday_ = birthday; }
+        bool setBirthday(string const birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
+
 };
 #endif

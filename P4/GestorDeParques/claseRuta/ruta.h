@@ -1,13 +1,22 @@
 #ifndef RUTA_H
 #define RUTA_H
-#include <string>
 #include <list>
-#include "senderista.h"
-#include "sendero.h"
-#include "ruta.h"
+#include <string>
 using namespace std;
 
+class Sendero;
+
+class Senderista;
+
+struct Incidence
+{
+    string hour;
+    string description;
+};
+
+
 class Ruta{
+
     private:
    
     string adaptations_;
@@ -19,31 +28,31 @@ class Ruta{
     string modality_;
     string name_;
     int numberOfPlaces_;
-    list <Senderista> excursionistRegistered_;
+    list<Senderista*> excursionistRegistered_;
     int parkID_;
     int routeID_;
-    list <Sendero> traversedTrail_;
-    list <Incidence> incidences_;
+    list<Sendero*> traversedTrail_;
+    list<Incidence> incidences_;
 
 
     public:
 
-    Ruta(string dniMonitor,int parkID, int routeID, list traversedTrail, int numberOfPlaces);
+    Ruta(string dniMonitor,int parkID, int routeID, list<Sendero> traversedTrail, int numberOfPlaces);
     
     inline string getAdaptations() const {return adaptations_;};
     inline string getDniMonitor() const {return dniMonitor_;};
     inline string getDniMonitorAlternate() const {return dniMonitorAlternate_;};
     inline int getDuration() const {return duration_;};
     inline bool getExclusiveness() const {return exclusiveness_;};
-    inline list<Indicende> getIncidences() const {return list<Indicence>;};
+    list<Incidence> getIncidences() const;
     inline float getLength() const {return length_;};
     inline string getModality() const {return modality_;};
     inline string getName() const {return name_;};
     inline int getNumberOfPlaces() const {return numberOfPlaces_;};
-    inline list<Excursionist> getExcursionistRegistered() const {return list<Excursionist>;};
+    list<Senderista*> getExcursionistRegistered() const;
     inline int getParkID() const {return parkID_;};
     inline int getRouteID() const {return routeID_;};
-    inline list<Trails> getTraversedTrail() const {return list<Trails>;};
+    list<Sendero*> getTraversedTrail() const;
 
 };
 #endif
