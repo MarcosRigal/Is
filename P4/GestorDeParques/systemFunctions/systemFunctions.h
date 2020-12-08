@@ -2,10 +2,10 @@
 #define SYSTEM_FUNCTIONS_H
 #include <iostream>
 #include <string>
-#include "parque.h"
-#include "monitor.h"
-#include "senderista.h"
-#include "administrativo.h"
+#include "../P4/GestorDeParques/claseParque/parque.h"
+#include "../P4/GestorDeParques/claseMonitor/monitor.h"
+#include "../P4/GestorDeParques/claseSenderista/senderista.h"
+#include "../P4/GestorDeParques/claseAdministrativo/administrativo.h"
 #include <list>
 
 bool existExcursionist(string dni);

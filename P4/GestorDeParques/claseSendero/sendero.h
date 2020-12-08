@@ -2,8 +2,8 @@
 #define SENDERO_H
 #include <iostream>
 #include <string>
-#include "systemFunctions.h"
-#include "system.cc"
+#include "../P4/GestorDeParques/systemFunctions/systemFunctions.h"
+
 using namespace std;
 
 class Sendero{

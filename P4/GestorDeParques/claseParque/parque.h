@@ -2,9 +2,9 @@
 #define PARQUE_H
 #include <list>
 #include <string>
-#include "sendero.h"
-#include "ruta.h"
-#include "systemFunctions.h"
+#include "../P4/GestorDeParques/claseSendero/sendero.h"
+#include "../P4/GestorDeParques/claseRuta/ruta.h"
+#include "../P4/GestorDeParques/systemFunctions/systemFunctions.h"
 using namespace std;
 
 struct award
