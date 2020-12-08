@@ -4,7 +4,8 @@
 #include <trabajador.h>
 using namespace std;
 
-class Monitor{
+class Monitor : public Trabajador
+{
     private:
 
         int phoneNumber_;
@@ -13,13 +14,11 @@ class Monitor{
 
     public:
 
-        Monitor(int phoneNumber, Trabajador trabajador);
+        Monitor(string dni, string email, string address, int phoneNumber) : Trabajador(dni, email, address) {setPhoneNumber(phoneNumber);status_=true; workedHours_=0;};
         
         int getPhoneNumber() const { return phoneNumber_; }
         float getWorkedHours() const { return workedHours_; }
         bool getStatus() const { return status_; }
-
-        /* Los sets deberian ser void????? */
 
         bool setPhoneNumber(int phoneNumber);
         bool setWorkedHours(float workedHours);
@@ -27,7 +26,6 @@ class Monitor{
 
         bool notifyIncidentOnRoute(int parkID, int routeID, string incidence);
         void getRouteReport(int parkID, int routeID);
-
 
 };
 #endif

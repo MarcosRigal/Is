@@ -2,9 +2,12 @@
 #define RUTA_H
 #include <string>
 #include <list>
+#include "senderista.h"
+#include "sendero.h"
+#include "ruta.h"
 using namespace std;
 
-class Ruta:/*public Sendero*/{
+class Ruta{
     private:
    
     string adaptations_;
@@ -16,16 +19,17 @@ class Ruta:/*public Sendero*/{
     string modality_;
     string name_;
     int numberOfPlaces_;
-    list <Excursionist> excursionistRegistered_;
+    list <Senderista> excursionistRegistered_;
     int parkID_;
     int routeID_;
-    list <Trails> traversedTrail_;
+    list <Sendero> traversedTrail_;
     list <Incidence> incidences_;
 
 
     public:
 
     Ruta(string dniMonitor,int parkID, int routeID, list traversedTrail, int numberOfPlaces);
+    
     inline string getAdaptations() const {return adaptations_;};
     inline string getDniMonitor() const {return dniMonitor_;};
     inline string getDniMonitorAlternate() const {return dniMonitorAlternate_;};

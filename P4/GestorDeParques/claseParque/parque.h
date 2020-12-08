@@ -32,6 +32,7 @@ class Parque{
     public:
 
     Parque::Parque(int parkID){setParkID(parkID);}
+    
     inline string getTown() const {return town_;}
     inline float getArea() const {return area_;}
     inline list<award> getAwards() const {return awards_;}
@@ -39,10 +40,11 @@ class Parque{
     inline string getHours() const {return hours_;}
     inline string getLocation() const {return location_;}
     inline string getName() const {return name_;}
-    inline int parkID() const {return parkID_;}
+    inline int getParkID() const {return parkID_;}
     inline string getProvince() const {return province_;}
     inline list<Sendero> getTrailList() const {return trailList_;}
-    inline list<Ruta> getRouteList() const {return routeList_;} 
+    inline list<Ruta> getRouteList() const {return routeList_;}
+
     inline bool setArea(float const &area){if (area<=0){return false;} area_=area; return true;}
     inline bool setAwards(list<award> const &awards){if (awards.empty()){return false;}awards_=awards; return true;}
     inline bool setDeclarationDate(string const &declarationDate){if(declarationDate.empty()){return false;}declarationDate_= declarationDate; return true;}
@@ -53,7 +55,7 @@ class Parque{
     inline bool setProvince(string const &province){if(province.empty()){return false;}province_=province; return true;}
     inline bool setTown(string const &town){if(town.empty()){return false;}town_=town; return true;}
     inline bool setTrailList(list<Sendero> const &trailList){if(trailList.empty()){return false;}trailList_=trailList; return true;}
-    inline bool setRouteList(list<Route> const &routeList){if(routeList.empty()){return false;}routeList_=routeList; return true;}
+    inline bool setRouteList(list<Ruta> const &routeList){if(routeList.empty()){return false;}routeList_=routeList; return true;}
 
 };
 #endif

@@ -22,10 +22,10 @@ class Trabajador : public Persona
         bool setAddress(string address) { address_ = address; }
         bool setEmail(string email) { email_ = email; }
 
-        bool addRoute(int parkID);
-        bool editRoute(int parkID, int routeID);
-        bool deleteRoute(int parkID, int routeID);
-        bool viewRoute(int parkID, int routeID);
+        bool addRoute(list<Parque> &listOfParks);
+        bool editRoute(list<Parque> &listOfParks);
+        bool deletRoute(list<Parque> &listOfParks);
+        void viewRoute(list<Parque> &listOfParks);
 
 };
 #endif
