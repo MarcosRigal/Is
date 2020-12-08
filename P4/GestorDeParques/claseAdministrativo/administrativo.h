@@ -1,15 +1,15 @@
 #ifndef ADMINISTRATIVO_H
 #define ADMINISTRATIVO_H
 #include <iostream>
+#include "trabajador.h"
+#include "parque.h"
 
-class Administrativo{
-    private:
-
-    //Variables de la clase
-
+class Administrativo : public Trabajador
+{
     public:
 
-    //Operaciones y funciones de la clase
-
+    Administrativo(string dni, string email, string address) : Trabajador(dni, email, address){};
+    bool addPark(Parque newPark){}
+    
 };
 #endif

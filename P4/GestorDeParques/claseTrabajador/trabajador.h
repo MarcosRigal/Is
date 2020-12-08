@@ -5,7 +5,8 @@
 #include "persona.h"
 using namespace std;
 
-class Trabajador{
+class Trabajador : public Persona
+{
     private:
 
         string email_;
@@ -13,7 +14,7 @@ class Trabajador{
 
     public:
 
-        Trabajador(Persona persona);
+        Trabajador(string dni, string email, string address) : Persona(dni) {email_=email; address_=address;}
 
         string getAddress() const { return address_; }
         string getEmail() const { return email_; }
