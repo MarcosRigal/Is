@@ -51,13 +51,15 @@ class Ruta{
     bool setAdaptations(string const &adapts);
     bool setDniMonitor(string const &dniMonitor);
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
-    bool setDuration(int const &duration);
-    bool setExclusiveness(bool exclusiveness);
     bool setIncidences(list<string>);
-    bool setLength(float const &length);
-    bool setModality(string const &modality);
-    bool setName(string const &name);
-    bool setNumberOfPlaces(int const &n);
+
+    inline bool setDuration(int const &duration){duration_=duration;};
+    inline bool setExclusiveness(bool exclusiveness){exclusiveness_=exclusiveness;};
+    inline bool setLength(float const &length){length_=length;};
+    inline bool setModality(string const &modality){modality_=modality;};
+    inline bool setName(string const &name){name_=name;};
+    inline bool setNumberOfPlaces(int const &n){numberOfPlaces_=n;};
+    
     bool setExcursionistRegistered(list<Senderista*>);
     bool setParkID(int const &parkID);
     bool setRouteID(int const &parkID,int const &routeID);
