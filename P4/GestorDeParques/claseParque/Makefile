@@ -1,6 +1,6 @@
-DIR_TRAIL=/home/marcos/Desktop/GestorDeParques/claseSendero
-DIR_ROUTE=/home/marcos/Desktop/GestorDeParques/claseRuta
-DIR_SYSTEM=/home/marcos/Desktop/GestorDeParques/systemFunctions
+DIR_TRAIL=/home/marcos/Repositories/University/Is/P4/GestorDeParques/claseSendero
+DIR_ROUTE=/home/marcos/Repositories/University/Is/P4/GestorDeParques/claseRuta
+DIR_SYSTEM=/home/marcos/Repositories/University/Is/P4/GestorDeParques/systemFunctions
 
 all: Parque.o
 
