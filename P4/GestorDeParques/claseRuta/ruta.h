@@ -60,7 +60,14 @@ class Ruta{
     bool setDuration(int const &duration);
     bool setExclusiveness(bool exclusiveness);
     bool setIncidences(list<Incidence>);
-
+    bool setLength(float const &length);
+    bool setModality(string const &modality);
+    bool setName(string const &name);
+    bool setNumberOfPlaces(int const &n);
+    bool setExcursionistRegistered(list<Senderista*>);
+    bool setParkID(int const &parkID);
+    bool setRouteID(int const &routeID);
+    bool setTraversedTrails(list<Sendero*>);
 
 };
 #endif
