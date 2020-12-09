@@ -53,7 +53,7 @@ class Ruta{
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
     bool setIncidences(list<string>);
 
-    inline bool setDuration(int const &duration){duration_=duration;};
+    inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true};
     inline bool setExclusiveness(bool exclusiveness){exclusiveness_=exclusiveness;};
     inline bool setLength(float const &length){length_=length;};
     inline bool setModality(string const &modality){modality_=modality;};
