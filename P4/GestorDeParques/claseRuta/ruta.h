@@ -54,5 +54,13 @@ class Ruta{
     inline int getRouteID() const {return routeID_;};
     list<Sendero*> getTraversedTrail() const;
 
+    bool setAdaptations(string const &adapts);
+    bool setDniMonitor(string const &dniMonitor);
+    bool setDniMonitorAlternate(string const &dniMonitorAlternate);
+    bool setDuration(int const &duration);
+    bool setExclusiveness(bool exclusiveness);
+    bool setIncidences(list<Incidence>);
+
+
 };
 #endif
