@@ -1,6 +1,7 @@
 #include "ruta.h"
 #include "../claseSenderista/senderista.h"
 #include "../claseSendero/sendero.h"
+#include "../systemFunctions/systemFunctions.h"
 
 list<Sendero*> Ruta::getTraversedTrail() const 
 {
@@ -12,7 +13,41 @@ list<Senderista*> Ruta::getExcursionistRegistered() const
    return excursionistRegistered_;
 }
 
-list<Incidence> Ruta::getIncidences() const 
+list<string> Ruta::getIncidences() const 
 {
    return incidences_;
+}
+
+bool Ruta::setParkID(int const &parkID){
+    if (existPark(parkID)){
+        parkID_ = parkID;
+        return true;
+    }
+    return false;
+}
+
+bool Ruta::setRouteID(int const &parkID,int const &routeID){
+   if(existRoute(parkID,routeID)){
+      return false;
+   }
+   routeID_=routeID;
+   return true;
+}
+
+bool Ruta::setDniMonitor(string const &dniMonitor){
+   if (dniIsValid(dniMonitor)){
+        dniMonitor_=dniMonitor;
+        return true;  
+    }
+    
+    return false;
+}
+
+bool Ruta::setDniMonitorAlternate(string const &dniMonitorAlternate){
+   if (dniIsValid(dniMonitorAlternate)){
+        dniMonitorAlternate_=dniMonitorAlternate;
+        return true;  
+    }
+    
+    return false;
 }

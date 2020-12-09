@@ -60,7 +60,7 @@ class Ruta{
     bool setNumberOfPlaces(int const &n);
     bool setExcursionistRegistered(list<Senderista*>);
     bool setParkID(int const &parkID);
-    bool setRouteID(int const &routeID);
+    bool setRouteID(int const &parkID,int const &routeID);
     bool setTraversedTrails(list<Sendero*>);
 
 };
