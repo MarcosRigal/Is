@@ -8,12 +8,6 @@ class Sendero;
 
 class Senderista;
 
-struct Incidence
-{
-    string hour;
-    string description;
-};
-
 
 class Ruta{
 
@@ -32,7 +26,7 @@ class Ruta{
     int parkID_;
     int routeID_;
     list<Sendero*> traversedTrail_;
-    list<Incidence> incidences_;
+    list<string> incidences_;
 
 
     public:
@@ -44,7 +38,7 @@ class Ruta{
     inline string getDniMonitorAlternate() const {return dniMonitorAlternate_;};
     inline int getDuration() const {return duration_;};
     inline bool getExclusiveness() const {return exclusiveness_;};
-    list<Incidence> getIncidences() const;
+    list<string> getIncidences() const;
     inline float getLength() const {return length_;};
     inline string getModality() const {return modality_;};
     inline string getName() const {return name_;};
@@ -59,7 +53,7 @@ class Ruta{
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
     bool setDuration(int const &duration);
     bool setExclusiveness(bool exclusiveness);
-    bool setIncidences(list<Incidence>);
+    bool setIncidences(list<string>);
     bool setLength(float const &length);
     bool setModality(string const &modality);
     bool setName(string const &name);
