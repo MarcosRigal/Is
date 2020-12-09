@@ -26,8 +26,8 @@ class Sendero{
 
         bool setDifficultyLevel(int const difficultyLevel);
         inline bool setName(string const name) {if(name.empty()){return false;} name_ = name; return true;}
-        bool setParkID(int const parkID); /* Falta comprobar si el parque existe o no */
-        bool setTrailID(int const &parkID,int const &trailID); /* Falta comprobar si el sendero ya existe o no */
+        bool setParkID(int const parkID);
+        bool setTrailID(int const &parkID,int const &trailID);
         inline bool setTrailStatus(bool const trailStatus) {trailStatus_ = trailStatus; return true;}
 
 };
