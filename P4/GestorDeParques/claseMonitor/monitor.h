@@ -20,8 +20,8 @@ class Monitor : public Trabajador
         float getWorkedHours() const { return workedHours_; }
         bool getStatus() const { return status_; }
 
-        bool setPhoneNumber(int phoneNumber);
-        bool setWorkedHours(float workedHours);
+        bool setPhoneNumber(int phoneNumber){if(phoneNumber<=0){return false;} phoneNumber_=phoneNumber; return true;}
+        bool setWorkedHours(float workedHours){if(workedHours<=0){return false;} workedHours_=workedHours; return true;};
         bool setStatus(bool status);
 
         bool notifyIncidentOnRoute(int parkID, int routeID, string incidence);
