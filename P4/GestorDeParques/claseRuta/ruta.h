@@ -48,16 +48,16 @@ class Ruta{
     inline int getRouteID() const {return routeID_;};
     list<Sendero*> getTraversedTrail() const;
 
-    bool setAdaptations(string const &adapts);
-    bool setDniMonitor(string const &dniMonitor);
-    bool setDniMonitorAlternate(string const &dniMonitorAlternate);
+    inline bool setAdaptations(string const &adapts){if(adapts.empty()){return false;} adaptations_=adapts; return true;};
+    bool setDniMonitor(string const &dniMonitor){if(dniMonitor.empty()){return false;} dniMonitor_=dniMonitor; return true;};
+    bool setDniMonitorAlternate(string const &dniMonitorAlternate){if(dniMonitorAlternate.empty()){return false;} dniMonitorAlternate_=dniMonitorAlternate; return true;};
     bool setIncidences(list<string>);
 
     inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true;};
     inline bool setExclusiveness(bool exclusiveness){if(exclusiveness!=0){return false;}exclusiveness_=exclusiveness; return true;};
     inline bool setLength(float const &length){if(length<=0){return false;}length_=length; return true;};
-    inline bool setModality(string const &modality){modality_=modality;};
-    inline bool setName(string const &name){name_=name;};
+    inline bool setModality(string const &modality){if(modality.empty()){return false;} modality_ = modality; return true;};
+    inline bool setName(string const &name){if(name.empty()){return false;} name_=name; return true;};
     inline bool setNumberOfPlaces(int const &n){if(n<=0){return false;}numberOfPlaces_=n; return true;};
     
     bool setExcursionistRegistered(list<Senderista*>);
