@@ -2,6 +2,7 @@
 #define TRABAJADOR_H
 #include <iostream>
 #include <string>
+#include <list>
 #include "../clasePersona/persona.h"
 using namespace std;
 
