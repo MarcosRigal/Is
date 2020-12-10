@@ -53,12 +53,12 @@ class Ruta{
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
     bool setIncidences(list<string>);
 
-    inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true};
-    inline bool setExclusiveness(bool exclusiveness){exclusiveness_=exclusiveness;};
-    inline bool setLength(float const &length){length_=length;};
+    inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true;};
+    inline bool setExclusiveness(bool exclusiveness){if(exclusiveness!=0){return false;}exclusiveness_=exclusiveness; return true;};
+    inline bool setLength(float const &length){if(length<=0){return false;}length_=length; return true;};
     inline bool setModality(string const &modality){modality_=modality;};
     inline bool setName(string const &name){name_=name;};
-    inline bool setNumberOfPlaces(int const &n){numberOfPlaces_=n;};
+    inline bool setNumberOfPlaces(int const &n){if(n<=0){return false;}numberOfPlaces_=n; return true;};
     
     bool setExcursionistRegistered(list<Senderista*>);
     bool setParkID(int const &parkID);
