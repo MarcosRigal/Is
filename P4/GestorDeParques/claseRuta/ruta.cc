@@ -1,6 +1,7 @@
 #include "ruta.h"
 #include "../claseSenderista/senderista.h"
 #include "../claseSendero/sendero.h"
+#include "../claseParque/parque.h"
 #include "../systemFunctions/systemFunctions.h"
 
 list<Sendero*> Ruta::getTraversedTrail() const 
@@ -18,8 +19,8 @@ list<string> Ruta::getIncidences() const
    return incidences_;
 }
 
-bool Ruta::setParkID(int const &parkID){
-    if (existPark(parkID)){
+bool Ruta::setRouteParkID(int parkID, list<Parque*> &listOfParks){
+    if (existPark(parkID, listOfParks)){
         parkID_ = parkID;
         return true;
     }

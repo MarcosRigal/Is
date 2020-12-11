@@ -34,4 +34,8 @@ bool existAdministrator(string dni, list<Administrativo*> listOfAdministrators){
 	return false;
 }
 
+bool existPark(int parkID, list<Parque*> &listOfParks)
+{
+	return false;
+}
 

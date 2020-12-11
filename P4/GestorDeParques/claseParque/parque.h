@@ -32,7 +32,7 @@ class Parque{
 
     public:
 
-    Parque(int parkID){setParkID(parkID);}
+    Parque(int parkID, list<Parque*> &listOfParks){setParkID(parkID, listOfParks);}
     
     inline string getTown() const {return town_;}
     inline float getArea() const {return area_;}
@@ -52,7 +52,7 @@ class Parque{
     inline bool setHours(string const &hours){if(hours.empty()){return false;}hours_=hours; return true;}
     inline bool setLocation(string const &location){if(location.empty()){return false;}location_=location; return true;}
     inline bool setName(string const &name){if(name.empty()){return false;}name_=name; return true;}
-    bool setParkID(int const &parkID);
+    bool setParkID(int parkID, list<Parque*> &listOfParks);
     inline bool setProvince(string const &province){if(province.empty()){return false;}province_=province; return true;}
     inline bool setTown(string const &town){if(town.empty()){return false;}town_=town; return true;}
     inline bool setTrailList(list<Sendero*> const &trailList){if(trailList.empty()){return false;}trailList_=trailList; return true;}

@@ -1,4 +1,5 @@
 #include "sendero.h"
+#include "../claseParque/parque.h"
 #include "../systemFunctions/systemFunctions.h"
 
 bool Sendero::setDifficultyLevel(int const difficultyLevel){
@@ -10,8 +11,8 @@ bool Sendero::setDifficultyLevel(int const difficultyLevel){
     return true;
 }
 
-bool Sendero::setParkID(int const parkID){
-    if (existPark(parkID)){
+bool Sendero::setTrailParkID(int parkID, list<Parque*> &listOfParks){
+    if (existPark(parkID, listOfParks)){
         parkID_ = parkID;
         return true;
     }

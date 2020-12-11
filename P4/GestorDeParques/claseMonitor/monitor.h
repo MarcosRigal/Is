@@ -4,6 +4,8 @@
 #include "../claseTrabajador/trabajador.h"
 using namespace std;
 
+class Parque;
+
 class Monitor : public Trabajador
 {
     private:
@@ -22,9 +24,9 @@ class Monitor : public Trabajador
 
         bool setPhoneNumber(int phoneNumber){if(phoneNumber<=0){return false;} phoneNumber_=phoneNumber; return true;}
         bool setWorkedHours(float workedHours){if(workedHours<=0){return false;} workedHours_=workedHours; return true;};
-        bool setStatus(bool status);
+        bool setStatus(bool status){status_=status;return true;};
 
-        bool notifyIncidentOnRoute(int parkID, int routeID, string incidence);
+        bool notifyIncidentOnRoute(list<Parque*> &listOfParks, string incidence);
         void getRouteReport(int parkID, int routeID);
 
 };

@@ -8,6 +8,8 @@ class Sendero;
 
 class Senderista;
 
+class Parque;
+
 
 class Ruta{
 
@@ -49,9 +51,9 @@ class Ruta{
     list<Sendero*> getTraversedTrail() const;
 
     inline bool setAdaptations(string const &adapts){if(adapts.empty()){return false;} adaptations_=adapts; return true;};
-    bool setDniMonitor(string const &dniMonitor){if(dniMonitor.empty()){return false;} dniMonitor_=dniMonitor; return true;};
-    bool setDniMonitorAlternate(string const &dniMonitorAlternate){if(dniMonitorAlternate.empty()){return false;} dniMonitorAlternate_=dniMonitorAlternate; return true;};
-    bool setIncidences(list<string>);
+    bool setDniMonitor(string const &dniMonitor);
+    bool setDniMonitorAlternate(string const &dniMonitorAlternate);
+    bool setIncidences(list<string> incidences);
 
     inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true;};
     inline bool setExclusiveness(bool exclusiveness){if(exclusiveness!=0){return false;}exclusiveness_=exclusiveness; return true;};
@@ -60,10 +62,10 @@ class Ruta{
     inline bool setName(string const &name){if(name.empty()){return false;} name_=name; return true;};
     inline bool setNumberOfPlaces(int const &n){if(n<=0){return false;}numberOfPlaces_=n; return true;};
     
-    bool setExcursionistRegistered(list<Senderista*>);
-    bool setParkID(int const &parkID);
+    bool setExcursionistRegistered(list<Senderista*> listOfExcursioneist);
+    bool setRouteParkID(int parkID, list<Parque*> &listOfParks);
     bool setRouteID(int const &parkID,int const &routeID);
-    bool setTraversedTrails(list<Sendero*>);
+    bool setTraversedTrails(list<Sendero*> traversedTrails);
 
 };
 #endif

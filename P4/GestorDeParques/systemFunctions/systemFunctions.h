@@ -14,7 +14,7 @@ class Parque;
 class Administrativo;
 
 bool existExcursionist(string dni);
-bool existPark(int parkID);
+bool existPark(int parkID, list<Parque*> &listOfParks);
 bool existRoute(int parkID, int routeID);
 bool existTrail(int parkID, int trailID);
 bool existMonitor(string dni, list<Monitor*> listOfMonitors);

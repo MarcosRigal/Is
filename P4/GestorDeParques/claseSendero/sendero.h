@@ -2,8 +2,11 @@
 #define SENDERO_H
 #include <iostream>
 #include <string>
+#include <list>
 
 using namespace std;
+
+class Parque;
 
 class Sendero{
     private:
@@ -26,7 +29,7 @@ class Sendero{
 
         bool setDifficultyLevel(int const difficultyLevel);
         inline bool setName(string const name) {if(name.empty()){return false;} name_ = name; return true;}
-        bool setParkID(int const parkID);
+        bool setTrailParkID(int parkID, list<Parque*> &listOfParks);
         bool setTrailID(int const &parkID,int const &trailID);
         inline bool setTrailStatus(bool const trailStatus) {trailStatus_ = trailStatus; return true;}
 

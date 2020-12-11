@@ -3,9 +3,9 @@
 #include "../claseRuta/ruta.h"
 #include "../systemFunctions/systemFunctions.h"
 
-bool Parque::setParkID(int const &parkID)
+bool Parque::setParkID(int parkID, list<Parque*> &listOfParks)
 {
-   if(existPark(parkID))
+   if(existPark(parkID, listOfParks))
    {
       return false;
    }

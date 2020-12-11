@@ -2,3 +2,4 @@
 cd claseParque
 make
 cd ..
+make
