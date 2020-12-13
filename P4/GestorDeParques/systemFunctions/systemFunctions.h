@@ -18,7 +18,6 @@ class Administrativo;*/
 bool login();
 bool saveSystem();*/
 
-void warnExcursionist(int parkID, int routeID);
 
 
 

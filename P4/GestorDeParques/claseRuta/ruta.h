@@ -68,6 +68,7 @@ class Ruta{
     bool setTraversedTrails(list<Sendero*> traversedTrails);
 
     int placesLeft();
+    void warnExcursionist();
 
 };
 #endif
