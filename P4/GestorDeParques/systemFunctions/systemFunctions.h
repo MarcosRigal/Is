@@ -5,20 +5,21 @@
 #include <list>
 using namespace std;
 
-class Monitor;
+/*class Monitor;
 
 class Senderista;
 
 class Parque;
 
-class Administrativo;
+class Administrativo;*/
 
 
-bool loadSystem();
-int placesLeft(int parkID, int routeID);
-bool saveSystem();
-void warnExcursionist(int parkID, int routeID);
+/*bool loadSystem();
 bool login();
+bool saveSystem();*/
+
+void warnExcursionist(int parkID, int routeID);
+
 
 
 #endif

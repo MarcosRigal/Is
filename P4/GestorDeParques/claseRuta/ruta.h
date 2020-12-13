@@ -67,5 +67,7 @@ class Ruta{
     bool setRouteID(int const &parkID,int const &routeID);
     bool setTraversedTrails(list<Sendero*> traversedTrails);
 
+    int placesLeft();
+
 };
 #endif
