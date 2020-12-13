@@ -19,6 +19,6 @@ int placesLeft(int parkID, int routeID);
 bool saveSystem();
 void warnExcursionist(int parkID, int routeID);
 bool login();
-bool dniIsValid(string dni);
+
 
 #endif
