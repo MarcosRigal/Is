@@ -6,6 +6,26 @@
 #include "../GestorDeParques/claseMonitor/monitor.h"
 #include <stdio.h>
 
+bool existExcursionist(string dni);
+bool existRoute(int parkID, int routeID);
+bool existTrail(int parkID, int trailID);
+bool existMonitor(string dni, list<Monitor*> listOfMonitors);
+
+bool existAdministrator(string dni, list<Administrativo*> listOfAdministrators){
+	for (auto i=listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){		//Iteramos la lista
+		if(((*i)->getDni())==dni){														//Si el dni pasado como parametro a la funcion es igual que el dni del elemento i de la lista, el administrador existe
+			return true;
+		}
+	}
+	return false;
+}
+
+bool existPark(int parkID, list<Parque*> &listOfParks)
+{
+	return false;
+}
+
+
 int main()
 {
    system("clear");

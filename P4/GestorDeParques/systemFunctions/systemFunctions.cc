@@ -25,17 +25,4 @@ bool dniIsValid(string dni){
 	return true;                        //Se finalizara obteniendo que el dni introducido es correcto siempre que no se entre en ninguno de los if anteriores
 }
 
-bool existAdministrator(string dni, list<Administrativo*> listOfAdministrators){
-	for (auto i=listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){		//Iteramos la lista
-		if(((*i)->getDni())==dni){														//Si el dni pasado como parametro a la funcion es igual que el dni del elemento i de la lista, el administrador existe
-			return true;
-		}
-	}
-	return false;
-}
-
-bool existPark(int parkID, list<Parque*> &listOfParks)
-{
-	return false;
-}
 

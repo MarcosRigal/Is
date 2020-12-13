@@ -13,12 +13,7 @@ class Parque;
 
 class Administrativo;
 
-bool existExcursionist(string dni);
-bool existPark(int parkID, list<Parque*> &listOfParks);
-bool existRoute(int parkID, int routeID);
-bool existTrail(int parkID, int trailID);
-bool existMonitor(string dni, list<Monitor*> listOfMonitors);
-bool existAdministrator(string dni, list<Administrativo*> listOfAdministrators);
+
 bool loadSystem();
 int placesLeft(int parkID, int routeID);
 bool saveSystem();
