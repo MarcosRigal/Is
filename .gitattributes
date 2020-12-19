@@ -3,4 +3,5 @@
 *.html linguist-detectable=false
 *Makefile linguist-detectable=false
 *.py linguist-detectable=false
+*.ac linguist-detectable=false
 *.c++ linguist-detectable=true
