@@ -4,10 +4,6 @@
 #include <string>
 using namespace std;
 
-class Sendero;
-
-class Ruta;
-
 struct award
 {
     string name;
