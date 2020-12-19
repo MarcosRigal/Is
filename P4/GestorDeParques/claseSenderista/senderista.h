@@ -13,7 +13,7 @@ class Senderista : public Persona
 {
     private:
 
-    list<Ruta*> participatesOnRoute_;
+    list<int> participatesOnRoute_;
     int phoneNumber_;
     string specialRequirements_;
 
@@ -21,11 +21,11 @@ class Senderista : public Persona
 
     Senderista(string dni, int phoneNumber) : Persona(dni) {phoneNumber_=phoneNumber;}
 
-    list<Ruta*> getParticipatesOnRoute() const;
+    list<int> getParticipatesOnRoute() const;
     inline int getPhoneNumber() const {return phoneNumber_;}
     inline string getSpecialRequirements() const {return specialRequirements_;}
     
-    bool setParticipatesOnRoute(list<Ruta*> const &participatesOnRute);
+    bool setParticipatesOnRoute(list<int> const &participatesOnRute);
     inline bool setPhoneNumber(int const &phoneNumber){if(phoneNumber<100000000){return false;}phoneNumber_=phoneNumber; return true;}
     inline bool setSpecialRequirements(string const &specialRequirements){if(specialRequirements.empty()){return false;}specialRequirements_=specialRequirements; return true;}
 

@@ -6,8 +6,6 @@
 
 using namespace std;
 
-class Parque;
-
 class Sendero{
     private:
 
@@ -29,7 +27,7 @@ class Sendero{
 
         bool setDifficultyLevel(int const difficultyLevel);
         inline bool setName(string const name) {if(name.empty()){return false;} name_ = name; return true;}
-        bool setTrailParkID(int parkID, list<Parque*> &listOfParks);
+        bool setParkID(int parkID);
         bool setTrailID(int const &parkID,int const &trailID);
         inline bool setTrailStatus(bool const trailStatus) {trailStatus_ = trailStatus; return true;}
 

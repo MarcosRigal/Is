@@ -27,8 +27,6 @@ class Parque{
     int parkID_;
     string province_;
     string town_;
-    list<Sendero*> trailList_;
-    list<Ruta*> routeList_;
 
     public:
 
@@ -43,8 +41,6 @@ class Parque{
     inline string getName() const {return name_;}
     inline int getParkID() const {return parkID_;}
     inline string getProvince() const {return province_;}
-    inline list<Sendero*> getTrailList() const {return trailList_;}
-    inline list<Ruta*> getRouteList() const {return routeList_;}
 
     inline bool setArea(float const &area){if (area<=0){return false;} area_=area; return true;}
     inline bool setAwards(list<award> const &awards){if (awards.empty()){return false;}awards_=awards; return true;}
@@ -55,8 +51,6 @@ class Parque{
     bool setParkID(int parkID, list<Parque*> &listOfParks);
     inline bool setProvince(string const &province){if(province.empty()){return false;}province_=province; return true;}
     inline bool setTown(string const &town){if(town.empty()){return false;}town_=town; return true;}
-    inline bool setTrailList(list<Sendero*> const &trailList){if(trailList.empty()){return false;}trailList_=trailList; return true;}
-    inline bool setRouteList(list<Ruta*> const &routeList){if(routeList.empty()){return false;}routeList_=routeList; return true;}
 
 };
 #endif

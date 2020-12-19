@@ -6,7 +6,7 @@
 #include "../clasePersona/persona.h"
 using namespace std;
 
-class Parque;
+class Ruta;
 
 class Trabajador : public Persona
 {
@@ -25,10 +25,10 @@ class Trabajador : public Persona
         bool setAddress(string address) {if(address.empty()){return false;} address_ = address; return true; }
         bool setEmail(string email) {if(email.empty()){return false;} email_ = email; return true; }
 
-        bool addRoute(list<Parque*> &listOfParks);
-        bool editRoute(list<Parque*> &listOfParks);
-        bool deletRoute(list<Parque*> &listOfParks);
-        void viewRoute(list<Parque*> &listOfParks);
+        bool addRoute(list<Ruta*> &listOfRoutes);
+        bool editRoute(list<Ruta*> &listOfRoutes);
+        bool deletRoute(list<Ruta*> &listOfRoutes);
+        void viewRoute(list<Ruta*> &listOfRoutes);
 
 };
 #endif

@@ -6,6 +6,7 @@
 
 class Parque;
 class Monitor;
+class Sendero;
 class Senderista;
 
 class Administrativo : public Trabajador
@@ -19,10 +20,10 @@ class Administrativo : public Trabajador
     bool deletePark(list<Parque*> &listOfParks);
     void viewPark(list<Parque*> &listOfParks);
     
-    bool addTrail(list<Parque*> &listOfParks);
-    bool editTrail(list<Parque*> &listOfParks);
-    bool deleteTrail(list<Parque*> &listOfParks);
-    void viewTrail(list<Parque*> &listOfParks);
+    bool addTrail(list<Sendero*> &listOfParks);
+    bool editTrail(list<Sendero*> &listOfParks);
+    bool deleteTrail(list<Sendero*> &listOfParks);
+    void viewTrail(list<Sendero*> &listOfParks);
 
     bool addMonitor(list<Monitor*> &listOfMonitors);
     bool editMonitor(list<Monitor*> &listOfMonitors);
