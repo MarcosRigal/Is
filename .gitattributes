@@ -1,5 +1,12 @@
-*.sh linguist-detectable=false
-*.py linguist-detectable=false
-*Text linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+*.html linguist-detectable=false
 *Makefile linguist-detectable=false
+*.py linguist-detectable=false
+*.ac linguist-detectable=false
+*.md linguist-detectable=false
+*.am linguist-detectable=false
+*.sh linguist-detectable=false
+*.in linguist-detectable=false
+*.c linguist-detectable=false
 *.c++ linguist-detectable=true

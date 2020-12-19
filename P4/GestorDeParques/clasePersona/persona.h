@@ -26,7 +26,5 @@ class Persona{
         bool setDni(string const &dni);
         bool setBirthday(string const birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
 
-        bool dniIsValid(string dni);
-
 };
 #endif
