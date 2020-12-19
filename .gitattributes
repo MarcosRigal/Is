@@ -1,6 +1,6 @@
 *.sh linguist-detectable=false
-*Python linguist-detectable=false
-*Text linguist-detectable=false
+*.py linguist-detectable=false
+*.txt linguist-detectable=false
 *.c linguist-detectable=false
 *Starlark linguist-detectable=false
 *Make linguist-detectable=false
