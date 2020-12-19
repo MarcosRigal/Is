@@ -3,6 +3,6 @@
 *.txt linguist-detectable=false
 *.c linguist-detectable=false
 *Starlark linguist-detectable=false
-*Make linguist-detectable=false
+*Makefile linguist-detectable=false
 *CMake linguist-detectable=false
 *.c++ linguist-detectable=true
