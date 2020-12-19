@@ -6,6 +6,6 @@ using namespace std;
 bool dniIsValid(string dni);
 void intro();
 string login();
-
+int whoIs(string dni);
 
 #endif

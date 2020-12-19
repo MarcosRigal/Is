@@ -67,3 +67,10 @@ string login()
    }
    return dni;
 }
+
+int whoIs(string dni)
+{
+   if(existAdministrativo(dni)){return 0;}
+   else if(existMonitor(dni)){return 1;}
+   return -1;
+}
