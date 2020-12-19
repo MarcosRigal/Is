@@ -1,5 +1,7 @@
-*Shell linguist-detectable=false
+*.sh linguist-detectable=false
 *Python linguist-detectable=false
 *Text linguist-detectable=false
 *.c linguist-detectable=false
+*Starlark linguist-detectable=false
+*CMake linguist-detectable=false
 *.c++ linguist-detectable=true
