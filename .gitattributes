@@ -1,5 +1,5 @@
-*.sh linguist-detectable=false
+*Shell linguist-detectable=false
 *Python linguist-detectable=false
 *Text linguist-detectable=false
-*Makefile linguist-detectable=false
+*.c linguist-detectable=false
 *.c++ linguist-detectable=true
