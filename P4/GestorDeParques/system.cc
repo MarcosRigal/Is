@@ -2,6 +2,7 @@
 
 int main()
 {
-   imprimeIntro();
+   intro();
+   string dni = login();
    return 0;
 }

@@ -1,6 +1,11 @@
 #ifndef SYSTEM_FUNCTIONS_H
 #define SYSTEM_FUNCTIONS_H
+#include <string>
+using namespace std;
 
-void imprimeIntro();
+bool dniIsValid(string dni);
+void intro();
+string login();
+
 
 #endif
