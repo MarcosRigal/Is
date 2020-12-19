@@ -1,25 +1,13 @@
 #include "ruta.h"
-#include "../claseSenderista/senderista.h"
-#include "../claseSendero/sendero.h"
 #include "../claseParque/parque.h"
 #include "../systemFunctions/systemFunctions.h"
-
-list<Sendero*> Ruta::getTraversedTrail() const 
-{
-   return traversedTrail_;
-}
-
-list<Senderista*> Ruta::getExcursionistRegistered() const 
-{
-   return excursionistRegistered_;
-}
 
 list<string> Ruta::getIncidences() const 
 {
    return incidences_;
 }
 
-bool Ruta::setRouteParkID(int parkID, list<Parque*> &listOfParks){
+bool Ruta::setRouteParkID(int parkID, list<int> &listOfParks){
     if (existPark(parkID, listOfParks)){
         parkID_ = parkID;
         return true;
@@ -51,4 +39,10 @@ bool Ruta::setDniMonitorAlternate(string const &dniMonitorAlternate){
     }
     
     return false;
+}
+
+int Ruta::placesLeft(){
+   int contador;                                                              //Variable en la que guardaremos el numero de senderistas que hay apuntados
+   contador = excursionistDNI_.size();
+   return (numberOfPlaces_ - contador);                                       //Devolvemos el numero de plazas disponibles (plazas totales - senderistas apuntados)
 }

@@ -33,21 +33,20 @@ class Ruta{
     inline string getDniMonitorAlternate() const {return dniMonitorAlternate_;};
     inline int getDuration() const {return duration_;};
     inline bool getExclusiveness() const {return exclusiveness_;};
-    list<string> getIncidences() const;
+    inline list<string> getIncidences() const {return incidences_;}
     inline float getLength() const {return length_;};
     inline string getModality() const {return modality_;};
     inline string getName() const {return name_;};
     inline int getNumberOfPlaces() const {return numberOfPlaces_;};
-    list<string> getExcursionistRegistered() const;
+    inline list<string> getExcursionistDNI() const {return excursionistDNI_;}
     inline int getParkID() const {return parkID_;};
     inline int getRouteID() const {return routeID_;};
-    list<int> getTraversedTrail() const;
+    inline list<int> getTraversedTrail() const {return idTraversedTrail_;}
 
     inline bool setAdaptations(string const &adapts){if(adapts.empty()){return false;} adaptations_=adapts; return true;};
     bool setDniMonitor(string const &dniMonitor);
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
-    bool setIncidences(list<string> incidences);
-
+    inline bool setIncidences(string incidences){incidences_.push_back(incidences);}           //A la funcion hay que pasarle un string, no una lista de strings
     inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true;};
     inline bool setExclusiveness(bool exclusiveness){if(exclusiveness!=0){return false;}exclusiveness_=exclusiveness; return true;};
     inline bool setLength(float const &length){if(length<=0){return false;}length_=length; return true;};
@@ -55,13 +54,12 @@ class Ruta{
     inline bool setName(string const &name){if(name.empty()){return false;} name_=name; return true;};
     inline bool setNumberOfPlaces(int const &n){if(n<=0){return false;}numberOfPlaces_=n; return true;};
     
-    bool setExcursionistRegistered(list<string> listOfExcursioneist);
     bool setRouteParkID(int parkID, list<int> &listOfParks);
     bool setRouteID(int const &parkID,int const &routeID);
     bool setTraversedTrails(list<int> traversedTrails);
 
     int placesLeft();
-    void warnExcursionist();
+    list<string> warnExcursionist(){return excursionistDNI_;}
 
 };
 #endif
