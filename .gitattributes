@@ -16,6 +16,8 @@
 *.js linguist-detectable=false
 *.html linguist-detectable=false
 *.py linguist-detectable=false
+*.bazel linguist-detectable=false
+*WORKSPACE linguist-detectable=false
 *.ac linguist-detectable=false
 *.c linguist-detectable=false
 *.h linguist-detectable=false
