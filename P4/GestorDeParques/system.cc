@@ -26,7 +26,20 @@ int main()
             /* code */
             break;
 
+         case 4:
+            /* code */
+            break;
+
+         case 5:
+            /* code */
+            break;
+
+         case 6:
+            /* code */
+            break;
+
          default:
+            shutDown();
             break;
          }
       }while (select!=0);
@@ -36,10 +49,10 @@ int main()
    case 1:
       do
       {
-         select=menuAdministrativo();
+         select=menuMonitor();
          switch (select)
          {
-         case 1:
+           case 1:
             /* code */
             break;
 
@@ -52,10 +65,11 @@ int main()
             break;
 
          default:
+            shutDown();
             break;
          }
       }while (select!=0);
-      exit(-1);
+      exit(0);
       break;
 
    default:

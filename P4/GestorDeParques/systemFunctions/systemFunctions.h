@@ -13,5 +13,6 @@ int whoIs(string dni);
 int menuAdministrativo();
 int menuMonitor();
 void errorUserNotFound();
+void shutDown();
 
 #endif

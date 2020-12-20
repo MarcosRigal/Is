@@ -34,12 +34,12 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 
 bool existAdministrativo(string dni)//Función que comprueba si un administrativo existe en el sistema
 {
-   return true;
+   return false;
 }
 
 bool existMonitor(string dni)//Función que comprueba si un monitor existe en el sistema
 {
-   return false;
+   return true;
 }
 
 void intro()//Función que imprime el menú de inicio
@@ -107,6 +107,24 @@ string login()//Función que imprime la pantalla de inicio de sesión
    return dni;
 }
 
+void shutDown()
+{
+   clear();
+   cout<<" ___________________________________________________\n";
+   cout<<"|                                                   |\n";
+   cout<<"|--------------- Apagando el sistema ---------------|\n";
+   cout<<"|___________________________________________________|\n";
+   cout<<"|                                                   |\n";
+   cout<<"|                                                   |\n";
+   cout<<"|                                                   |\n";
+   cout<<"|  El sistema se está apagando, por favor espere    |\n";
+   cout<<"|                                                   |\n";
+   cout<<"|                                                   |\n";
+   cout<<"|                                                   |\n";
+   cout<<"|___________________________________________________|\n";
+   exit(-1);  
+}
+
 int whoIs(string dni)//Función que nos indica si el dni introducido es de un monitor o de un administrador
 {
    if(existAdministrativo(dni)){return 0;}
@@ -128,12 +146,12 @@ int menuAdministrativo()//Función que imprime el menú de los administrativos
       cout<<"|Pulsa 3 para acceder a la gestión de las rutas       |\n";
       cout<<"|Pulsa 4 para acceder a la gestión de los senderistas |\n";
       cout<<"|Pulsa 5 acceder a la gestión de los trabajadores     |\n";
-      cout<<"|Pulsa 0 para salir del programa.                     |\n";
+      cout<<"|Pulsa 0 para salir del programa                      |\n";
       cout<<"|_____________________________________________________|\n";
    cout<<"\nSu elección: ";
    cin >> select;
    getchar();
-   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 7)
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 5)
    {
       clear();
       cout<<" _____________________________________________________\n";
@@ -146,7 +164,7 @@ int menuAdministrativo()//Función que imprime el menú de los administrativos
       cout<<"|Pulsa 3 para acceder a la gestión de las rutas       |\n";
       cout<<"|Pulsa 4 para acceder a la gestión de los senderistas |\n";
       cout<<"|Pulsa 5 acceder a la gestión de los trabajadores     |\n";
-      cout<<"|Pulsa 0 para salir del programa.                     |\n";
+      cout<<"|Pulsa 0 para salir del programa                      |\n";
       cout<<"|_____________________________________________________|\n";
       cout<<"\nError por favor escoja una opción válida: ";
       cin >> select;
@@ -157,7 +175,39 @@ int menuAdministrativo()//Función que imprime el menú de los administrativos
 
 int menuMonitor()//Función que imprime el menú de los monitores
 {
-   return 0;
+   string select;
+   clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|-----------------  Menú de monitor: -----------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para acceder a la gestión de las rutas       |\n";
+      cout<<"|Pulsa 2 para acceder a la gestión de las incidencias |\n";
+      cout<<"|Pulsa 3 para imprimir el informe de una ruta         |\n";
+      cout<<"|Pulsa 0 para salir del programa                      |\n";
+      cout<<"|_____________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 3)
+   {
+      clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|-----------------  Menú de monitor: -----------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para acceder a la gestión de las rutas       |\n";
+      cout<<"|Pulsa 2 para acceder a la gestión de las incidencias |\n";
+      cout<<"|Pulsa 3 para imprimir el informe de una ruta         |\n";
+      cout<<"|Pulsa 0 para salir del programa                      |\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
 }
 
 void errorUserNotFound()//Función que indica que ese dni no pertenece a ningún usuario
