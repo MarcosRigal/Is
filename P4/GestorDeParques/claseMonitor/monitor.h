@@ -26,8 +26,8 @@ class Monitor : public Trabajador
         bool setWorkedHours(float workedHours){if(workedHours<=0){return false;} workedHours_=workedHours; return true;};
         bool setStatus(bool status){status_=status;return true;};
 
-        bool notifyIncidentOnRoute(list<Parque*> &listOfParks, string incidence);
-        void getRouteReport(int parkID, int routeID);
+        bool notifyIncidentOnRoute(list<Ruta*> &listOfRoutes, string incidence, int parkID, int routeID);
+        void getRouteReport(list<Ruta*> &listOfRoutes, int parkID, int routeID);
 
 };
 #endif
