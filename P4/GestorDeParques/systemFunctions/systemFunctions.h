@@ -3,9 +3,15 @@
 #include <string>
 using namespace std;
 
+void clear();
 bool dniIsValid(string dni);
+bool existAdministrativo(string dni);
+bool existMonitor(string dni);
 void intro();
 string login();
 int whoIs(string dni);
+int menuAdministrativo();
+int menuMonitor();
+void errorUserNotFound();
 
 #endif
