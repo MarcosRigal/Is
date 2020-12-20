@@ -17,7 +17,7 @@ class Sendero{
 
     public:
 
-        Sendero(int parkID, int trailID){parkID_ = parkID; trailID_ = trailID;}
+        Sendero(setParkID(), setTrailID());
 
         inline int getDifficultyLevel() const { return difficultyLevel_; }
         inline string getName() const { return name_; }
@@ -27,7 +27,7 @@ class Sendero{
 
         bool setDifficultyLevel(int const difficultyLevel);
         inline bool setName(string const name) {if(name.empty()){return false;} name_ = name; return true;}
-        bool setParkID(int parkID);
+        bool setParkID(int parkID,list<int> &listOfParks);
         bool setTrailID(int const &parkID,int const &trailID);
         inline bool setTrailStatus(bool const trailStatus) {trailStatus_ = trailStatus; return true;}
 

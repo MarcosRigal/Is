@@ -19,10 +19,18 @@ bool Sendero::setTrailParkID(int parkID, list<Parque*> &listOfParks){
     return false;
 }
 
-bool Sendero::setTrailID(int const &parkID,int const &trailID){
-    if (existTrail(parkID, trailID)){                           //Retornará falso si le intentamos asignar un ID de un sendero que ya existe
+bool Sendero::setParkID(int parkID,list<int> &listOfParks){
+    if(parkID == existParkID(parkID, listOfParks)){
         return false;
     }
-    trailID_ = trailID;
+    parkID_=parkID;
+    return true;
+}
+
+bool Sendero::setTrailID(int const &parkID,int const &trailID){
+    if(trailID == existTrail(parkID, trailID)){
+        return false;
+    }
+    trailID_=trailID;
     return true;
 }
