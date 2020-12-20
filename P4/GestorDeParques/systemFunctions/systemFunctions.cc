@@ -34,12 +34,12 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 
 bool existAdministrativo(string dni)//Función que comprueba si un administrativo existe en el sistema
 {
-   return false;
+   return true;
 }
 
 bool existMonitor(string dni)//Función que comprueba si un monitor existe en el sistema
 {
-   return true;
+   return false;
 }
 
 void intro()//Función que imprime el menú de inicio
@@ -227,4 +227,238 @@ void errorUserNotFound()//Función que indica que ese dni no pertenece a ningún
    cout<<"|                                                   |\n";
    cout<<"|___________________________________________________|\n";
    exit(-1);
+}
+
+int menuParques()//Función que imprime el menú de gestion de los parques
+{
+   string select;
+   clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|----------------  Gestión de Parques: ---------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir un parque al sistema             |\n";
+      cout<<"|Pulsa 2 para editar la información de un parque      |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un parque     |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un parque    |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|----------------  Gestión de Parques: ---------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir un parque al sistema             |\n";
+      cout<<"|Pulsa 2 para editar la información de un parque      |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un parque     |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un parque    |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
+}
+
+int menuSenderos()//Función que imprime el menú de gestion de los senderos
+{
+   string select;
+   clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|---------------- Gestión de Senderos: ---------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir un sendero al sistema            |\n";
+      cout<<"|Pulsa 2 para editar la información de un sendero     |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un sendero    |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un sendero   |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|---------------- Gestión de Senderos: ---------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir un sendero al sistema            |\n";
+      cout<<"|Pulsa 2 para editar la información de un sendero     |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un sendero    |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un sendero   |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
+}
+
+int menuRutas()//Función que imprime el menú de gestion de las rutas
+{
+   string select;
+   clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|-----------------  Gestión de Rutas: ----------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir una ruta al sistema              |\n";
+      cout<<"|Pulsa 2 para editar la información de una ruta       |\n";
+      cout<<"|Pulsa 3 para mostrar la información de una ruta      |\n";
+      cout<<"|Pulsa 4 para eliminar la información de una ruta     |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|-----------------  Gestión de Rutas: ----------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para añadir una ruta al sistema              |\n";
+      cout<<"|Pulsa 2 para editar la información de una ruta       |\n";
+      cout<<"|Pulsa 3 para mostrar la información de una ruta      |\n";
+      cout<<"|Pulsa 4 para eliminar la información de una ruta     |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                 |\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
+}
+
+int menuSenderistas()//Función que imprime el menú de gestion de los senderistas
+{
+   string select;
+   clear();
+      cout<<" ______________________________________________________\n";
+      cout<<"|                                                      |\n";
+      cout<<"|---------------  Gestión de Senderistas --------------|\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"|                                                      |\n";
+      cout<<"|Pulsa 1 para añadir un senderista al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de un senderista   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un senderista  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un senderista |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                  |\n";
+      cout<<"|______________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" ______________________________________________________\n";
+      cout<<"|                                                      |\n";
+      cout<<"|---------------  Gestión de Senderistas --------------|\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"|                                                      |\n";
+      cout<<"|Pulsa 1 para añadir un senderista al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de un senderista   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un senderista  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un senderista |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                  |\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
+}
+
+int menuTrabajadores()//Función que imprime el menú de gestion de los trabajadores
+{
+   string select;
+   clear();
+      cout<<" ______________________________________________________\n";
+      cout<<"|                                                      |\n";
+      cout<<"|--------------- Gestión de Trabajadores --------------|\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"|                                                      |\n";
+      cout<<"|Pulsa 1 para añadir un trabajador al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de un trabajador   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un trabajador  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un trabajador |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                  |\n";
+      cout<<"|______________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" ______________________________________________________\n";
+      cout<<"|                                                      |\n";
+      cout<<"|--------------- Gestión de Trabajadores --------------|\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"|                                                      |\n";
+      cout<<"|Pulsa 1 para añadir un trabajador al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de un trabajador   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de un trabajador  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de un trabajador |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                  |\n";
+      cout<<"|______________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
+}
+
+int menuIncidencias()//Función que imprime el menú de gestion de los trabajadores
+{
+   string select;
+   clear();
+      cout<<" _______________________________________________________\n";
+      cout<<"|                                                       |\n";
+      cout<<"|----------------  Gestión de Incidencias --------------|\n";
+      cout<<"|_______________________________________________________|\n";
+      cout<<"|                                                       |\n";
+      cout<<"|Pulsa 1 para añadir una incidencia al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de una incidencia   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de una incidencia  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de una incidencia |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                   |\n";
+      cout<<"|_______________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 4)
+   {
+      clear();
+      cout<<" _______________________________________________________\n";
+      cout<<"|                                                       |\n";
+      cout<<"|----------------  Gestión de Incidencias --------------|\n";
+      cout<<"|_______________________________________________________|\n";
+      cout<<"|                                                       |\n";
+      cout<<"|Pulsa 1 para añadir una incidencia al sistema          |\n";
+      cout<<"|Pulsa 2 para editar la información de una incidencia   |\n";
+      cout<<"|Pulsa 3 para mostrar la información de una incidencia  |\n";
+      cout<<"|Pulsa 4 para eliminar la información de una incidencia |\n";
+      cout<<"|Pulsa 0 para volver al menú anterior                   |\n";
+      cout<<"|_______________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
 }

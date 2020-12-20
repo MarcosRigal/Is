@@ -14,5 +14,11 @@ int menuAdministrativo();
 int menuMonitor();
 void errorUserNotFound();
 void shutDown();
+int menuParques();
+int menuSenderos();
+int menuRutas();
+int menuSenderistas();
+int menuTrabajadores();
+int menuIncidencias();
 
 #endif
