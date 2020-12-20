@@ -46,3 +46,25 @@ int Ruta::placesLeft(){
    contador = excursionistDNI_.size();
    return (numberOfPlaces_ - contador);                                       //Devolvemos el numero de plazas disponibles (plazas totales - senderistas apuntados)
 }
+
+bool Ruta::setRouteParkID(int parkID, list<int> &listOfParks){
+   if(parkID == existParkID(parkID, listOfParks)){
+        return false;
+    }
+    parkID_=parkID;
+    return true;
+}
+
+bool Ruta::setRouteID(int const &parkID,int const &routeID){
+   if(routeID == existRoute(parkID, routeID)){
+        return false;
+    }
+    routeID_=routeID;
+    return true;
+}
+
+bool Ruta::setTraversedTrails(list<int> traversedTrails){
+   for(auto i=traversedTrails.begin(); i!=traversedTrails.end(); i++){
+       if()
+   }
+}
