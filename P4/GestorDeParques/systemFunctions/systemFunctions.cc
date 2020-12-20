@@ -34,7 +34,7 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 
 bool existAdministrativo(string dni)//Función que comprueba si un administrativo existe en el sistema
 {
-   return false;
+   return true;
 }
 
 bool existMonitor(string dni)//Función que comprueba si un monitor existe en el sistema
@@ -76,17 +76,7 @@ string login()//Función que imprime la pantalla de inicio de sesión
    contador++;
    while (!dniIsValid(dni))
    {
-      clear();
-      cout<<" ___________________________________________________\n";
-      cout<<"|                                                   |\n";
-      cout<<"|---------- Inicio de sesión en el sitema ----------|\n";
-      cout<<"|___________________________________________________|\n";
-      cout<<"\n     Error ha introducido un DNI no valido\n";
-      cout<<"   *Introduzca su DNI y pulse enter: ";
-      cin>>dni;
-      getchar();
-      contador++;
-      if (contador==3)
+      if (3==contador++)
       {
          clear();
          cout<<" ___________________________________________________\n";
@@ -104,6 +94,15 @@ string login()//Función que imprime la pantalla de inicio de sesión
          cout<<"|___________________________________________________|\n";
          exit(-1);
       }
+      clear();
+      cout<<" ___________________________________________________\n";
+      cout<<"|                                                   |\n";
+      cout<<"|---------- Inicio de sesión en el sitema ----------|\n";
+      cout<<"|___________________________________________________|\n";
+      cout<<"\n     Error ha introducido un DNI no valido\n";
+      cout<<"   *Introduzca su DNI y pulse enter: ";
+      cin>>dni;
+      getchar();
    }
    return dni;
 }
@@ -117,7 +116,43 @@ int whoIs(string dni)//Función que nos indica si el dni introducido es de un mo
 
 int menuAdministrativo()//Función que imprime el menú de los administrativos
 {
-   return 0;
+   string select;
+   clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|--------------  Menú de administrativo: -------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para acceder a la gestión de los parques     |\n";
+      cout<<"|Pulsa 2 para acceder a la gestión de los senderos    |\n";
+      cout<<"|Pulsa 3 para acceder a la gestión de las rutas       |\n";
+      cout<<"|Pulsa 4 para acceder a la gestión de los senderistas |\n";
+      cout<<"|Pulsa 5 acceder a la gestión de los trabajadores     |\n";
+      cout<<"|Pulsa 0 para salir del programa.                     |\n";
+      cout<<"|_____________________________________________________|\n";
+   cout<<"\nSu elección: ";
+   cin >> select;
+   getchar();
+   while (!isdigit(select[0]) || stoi(select)<0 || stoi(select) > 7)
+   {
+      clear();
+      cout<<" _____________________________________________________\n";
+      cout<<"|                                                     |\n";
+      cout<<"|--------------  Menú de administrativo: -------------|\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"|                                                     |\n";
+      cout<<"|Pulsa 1 para acceder a la gestión de los parques     |\n";
+      cout<<"|Pulsa 2 para acceder a la gestión de los senderos    |\n";
+      cout<<"|Pulsa 3 para acceder a la gestión de las rutas       |\n";
+      cout<<"|Pulsa 4 para acceder a la gestión de los senderistas |\n";
+      cout<<"|Pulsa 5 acceder a la gestión de los trabajadores     |\n";
+      cout<<"|Pulsa 0 para salir del programa.                     |\n";
+      cout<<"|_____________________________________________________|\n";
+      cout<<"\nError por favor escoja una opción válida: ";
+      cin >> select;
+      getchar();
+   }
+   return stoi(select);
 }
 
 int menuMonitor()//Función que imprime el menú de los monitores
