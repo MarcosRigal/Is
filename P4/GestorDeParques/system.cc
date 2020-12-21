@@ -1,5 +1,5 @@
 #include "../GestorDeParques/systemFunctions/systemFunctions.h"
-#include "../GestorDeParques/claseParque/parque.h"
+#include "../claseParque/parque.h"
 
 int main()
 {

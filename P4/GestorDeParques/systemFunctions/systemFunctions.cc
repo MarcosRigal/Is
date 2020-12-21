@@ -1,4 +1,7 @@
 #include "systemFunctions.h"
+#include "../claseParque/parque.h"
+#include "../claseSendero/sendero.h"
+#include "../claseRuta/ruta.h"
 #include <iostream>
 
 void clear(){//Funcion que limpia la terminal en función del sistema operativo que estemos utilizando
@@ -51,7 +54,7 @@ bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba 
    return false;
 }
 
-bool existRoute(int parkID, list<Ruta*> listOfRoutes, int routeID){//Función que comprueba si una ruta existe
+bool existRoute(int parkID, list<Ruta*> &listOfRoutes, int routeID){//Función que comprueba si una ruta existe
    for(auto i=listOfRoutes.begin(); i!= listOfRoutes.end(); i++){
       if((*i)->getParkID() == parkID){
          if((*i)->getRouteID() == routeID){
@@ -62,7 +65,7 @@ bool existRoute(int parkID, list<Ruta*> listOfRoutes, int routeID){//Función qu
    return false;
 }
 
-bool existTrail(int parkID ,list<Trail*> listOfTrails, int trailID){//Función que comprueba si un sendero existe
+bool existTrail(int parkID ,list<Sendero*> &listOfTrails, int trailID){//Función que comprueba si un sendero existe
    for(auto i=listOfTrails.begin(); i!= listOfTrails.end(); i++){
       if((*i)->getParkID() == parkID){
          if((*i)->getTrailID() == trailID){
