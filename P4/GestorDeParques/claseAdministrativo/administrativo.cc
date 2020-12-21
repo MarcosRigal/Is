@@ -88,3 +88,41 @@ bool Administrativo::editTrail(list<Sendero*> &listOfTrails, Sendero s){
         }
     }
 }
+
+/* Funciones de monitor */
+
+bool Administrativo::addMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+    for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
+        if(m.getDni() == (*i)->getDni()){
+            return false;
+        }
+    }
+    listOfMonitors.push_back(&m);
+    return true;
+}
+
+bool Administrativo::deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+    for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
+        if(m.getDni() == (*i)->getDni()){
+            listOfMonitors.remove(&m);
+            return true;
+        }
+    }
+    return false;
+}
+
+Monitor* Administrativo::viewMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+    for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
+        if(m.getDni() == (*i)->getDni()){
+            return *i;
+        }
+    }  
+}
+
+bool Administrativo::editMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+    for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
+        if(m.getDni() == (*i)->getDni()){
+            /* Que hacemos aqui?? */
+        }
+    }
+}
