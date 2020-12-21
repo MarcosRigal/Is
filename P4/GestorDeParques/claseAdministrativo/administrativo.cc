@@ -3,6 +3,7 @@
 #include "../claseSendero/sendero.h"
 #include "../claseMonitor/monitor.h"
 #include "../claseSenderista/senderista.h"
+#include "../claseRuta/ruta.h"
 
 
 
@@ -205,4 +206,38 @@ bool Administrativo::editExcursionist(list<Senderista*> &listOfExcursionists, Se
             /* Que hacemos aqui */
         }
     }
+}
+
+/* Funciones añadir y borrar senderista de una ruta */
+
+bool Administrativo::addExcursionistToRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s){
+    for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
+        if(r.getParkID() == (*i)->getParkID()){
+            if(r.getRouteID() == (*i)->getRouteID()){
+                for(auto j = r.getExcursionistDNI().begin(); j!=r.getExcursionistDNI().end(); j++){
+                    if(*j == s.getDni()){
+                        return false;
+                    }
+                } 
+            }
+        }
+    }
+    r.setExcursionistDni(s.getDni());
+    return true;
+}
+
+bool Administrativo::deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s){
+    for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
+        if(r.getParkID() == (*i)->getParkID()){
+            if(r.getRouteID() == (*i)->getRouteID()){
+                for(auto j = r.getExcursionistDNI().begin(); j!=r.getExcursionistDNI().end(); j++){
+                    if(*j == s.getDni()){
+                        /* Que hacemos aqui */
+                    }
+                } 
+            }
+        }
+    }
+    r.setExcursionistDni(s.getDni());
+    return true;
 }

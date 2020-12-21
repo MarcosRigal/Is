@@ -47,6 +47,7 @@ class Ruta{
     bool setDniMonitor(string const &dniMonitor);
     bool setDniMonitorAlternate(string const &dniMonitorAlternate);
     inline bool setIncidences(string incidences){incidences_.push_back(incidences);}           //A la funcion hay que pasarle un string, no una lista de strings
+    inline bool setExcursionistDni(string dni){excursionistDNI_.push_back(dni);}
     inline bool setDuration(int const &duration){if(duration<=0){return false;}duration_=duration; return true;};
     inline bool setExclusiveness(bool exclusiveness){if(exclusiveness!=0){return false;}exclusiveness_=exclusiveness; return true;};
     inline bool setLength(float const &length){if(length<=0){return false;}length_=length; return true;};

@@ -41,8 +41,8 @@ class Administrativo : public Trabajador
     bool deleteExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
     Senderista* viewExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
 
-    bool addExcursionistToRoute(list<Parque*> &listOfParks, list<Senderista*> &listOfExcursionists);
-    bool deleteExcursionistFromRoute(list<Parque*> &listOfParks, list<Senderista*> &listOfExcursionists);    
+    bool addExcursionistToRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s);
+    bool deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s);    
 
 };
 #endif
