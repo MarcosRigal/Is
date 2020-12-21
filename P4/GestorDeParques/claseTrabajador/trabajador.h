@@ -25,10 +25,10 @@ class Trabajador : public Persona
         bool setAddress(string address) {if(address.empty()){return false;} address_ = address; return true; }
         bool setEmail(string email) {if(email.empty()){return false;} email_ = email; return true; }
 
-        bool addRoute(list<Ruta*> &listOfRoutes);
-        bool editRoute(list<Ruta*> &listOfRoutes);
-        bool deletRoute(list<Ruta*> &listOfRoutes);
-        void viewRoute(list<Ruta*> &listOfRoutes);
+        bool addRoute(list<Ruta*> &listOfRoutes, Ruta r);
+        bool editRoute(list<Ruta*> &listOfRoutes, Ruta r);
+        bool deleteRoute(list<Ruta*> &listOfRoutes, Ruta r);
+        Ruta* viewRoute(list<Ruta*> &listOfRoutes, Ruta r);
 
 };
 #endif
