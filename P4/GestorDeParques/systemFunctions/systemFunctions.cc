@@ -67,7 +67,7 @@ bool existExcursionist(list<Senderista*> listOfExcursionist, string dni){
 
 bool existPark(list<Parque*> &listOfParks, int parkID){//Función que comprueba si un parque existe
    for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
-      if((*i)->getParkID() == p.getParkID()){
+      if((*i)->getParkID() == parkID){
          return true;
       }
    }
