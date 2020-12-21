@@ -8,7 +8,7 @@ void clear();
 bool dniIsValid(string dni);
 bool existAdministrator(list<Administrativo*> listOfAdministrators, string dni);
 bool existMonitor(list<Monitor*> listOfMonitors, string dni);
-bool existExcursionist(list<Excursionista*> listOfExcursionist, string dni);
+bool existExcursionist(list<Senderista*> listOfExcursionist, string dni);
 bool existPark(list<Parque*> listOfParks, int parkID);
 bool existRoute(list<Ruta*> listOfRoutes, int parkID, int routeID);
 bool existTrail(list<Sendero*> listOfTrails, int parkID, int trailID);

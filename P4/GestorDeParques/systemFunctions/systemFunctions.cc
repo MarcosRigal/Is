@@ -56,7 +56,7 @@ bool existMonitor(list<Monitor*> listOfMonitors, string dni){//Función que comp
    return false;
 }
 
-bool existExcursionist(list<Excursionista*> listOfExcursionist, string dni){
+bool existExcursionist(list<Senderista*> listOfExcursionist, string dni){
    for(auto i=listOfExcursionist.begin(); i!= listOfExcursionist.end(); i++){
       if((*i)->getDni() == dni){
          return true;
