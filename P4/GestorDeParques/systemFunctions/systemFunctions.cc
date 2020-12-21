@@ -46,16 +46,16 @@ bool existAdministrativo(list<Administrativo*> listOfAdministrators, string dni)
    return false;
 }
 
-bool existMonitor(list<Monitor*> listOfMonitors, Monitor m){//Función que comprueba si un monitor existe en el sistema
+bool existMonitor(list<Monitor*> listOfMonitors, string dni){//Función que comprueba si un monitor existe en el sistema
    for(auto i=listOfMonitors.begin(); i!= listOfMonitors.end(); i++){
-      if((*i)->getDni() == m.getDni()){
+      if((*i)->getDni() == dni){
          return true;
       }
    }
    return false;
 }
 
-bool existPark(list<Parque*> &listOfParks, Parque p){//Función que comprueba si un parque existe
+bool existPark(list<Parque*> &listOfParks, int parkID){//Función que comprueba si un parque existe
    for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
       if((*i)->getParkID() == p.getParkID()){
          return true;
@@ -64,10 +64,10 @@ bool existPark(list<Parque*> &listOfParks, Parque p){//Función que comprueba si
    return false;
 }
 
-bool existRoute(list<Ruta*> &listOfRoutes, Ruta r){//Función que comprueba si una ruta existe
+bool existRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){//Función que comprueba si una ruta existe
    for(auto i=listOfRoutes.begin(); i!= listOfRoutes.end(); i++){
-      if((*i)->getParkID() == r.getParkID()){
-         if((*i)->getRouteID() == r.getRouteID()){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getRouteID() == routeID){
             return true;
          }
       }
@@ -75,10 +75,10 @@ bool existRoute(list<Ruta*> &listOfRoutes, Ruta r){//Función que comprueba si u
    return false;
 }
 
-bool existTrail(list<Sendero*> &listOfTrails, Sendero s){//Función que comprueba si un sendero existe
+bool existTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){//Función que comprueba si un sendero existe
    for(auto i=listOfTrails.begin(); i!= listOfTrails.end(); i++){
-      if((*i)->getParkID() == s.getParkID()){
-         if((*i)->getTrailID() == s.getTrailID()){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getTrailID() == trailID){
             return true;
          }
       }
