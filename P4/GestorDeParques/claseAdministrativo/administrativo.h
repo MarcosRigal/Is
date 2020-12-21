@@ -20,10 +20,10 @@ class Administrativo : public Trabajador
     bool deletePark(list<Parque*> &listOfParks, Parque p);
     Parque* viewPark(list<Parque*> &listOfParks, Parque p);
     
-    bool addTrail(list<Sendero*> &listOfParks);
-    bool editTrail(list<Sendero*> &listOfParks);
-    bool deleteTrail(list<Sendero*> &listOfParks);
-    void viewTrail(list<Sendero*> &listOfParks);
+    bool addTrail(list<Sendero*> &listOfTrails, Sendero s);
+    bool editTrail(list<Sendero*> &listOfTrails, Sendero s);
+    bool deleteTrail(list<Sendero*> &listOfTrails, Sendero s);
+    Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s);
 
     bool addMonitor(list<Monitor*> &listOfMonitors);
     bool editMonitor(list<Monitor*> &listOfMonitors);
