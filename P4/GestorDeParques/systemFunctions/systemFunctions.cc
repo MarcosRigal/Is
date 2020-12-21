@@ -51,10 +51,12 @@ bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba 
    return false;
 }
 
-bool existRoute(int parkID, list<string> listOfParks, int routeID){//Función que comprueba si una ruta existe
-   if(parkID == existPark(parkID, listOfParks){
-      if(routeID == ){
-         return true;
+bool existRoute(int parkID, list<Ruta*> listOfRoutes, int routeID){//Función que comprueba si una ruta existe
+   for(auto i=listOfRoutes.begin(); i!= listOfRoutes.end(); i++){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getRouteID() == routeID){
+            return true;
+         }
       }
    }
    return false;
