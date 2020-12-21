@@ -62,10 +62,12 @@ bool existRoute(int parkID, list<Ruta*> listOfRoutes, int routeID){//Función qu
    return false;
 }
 
-bool existTrail(int parkID ,list<string> listOfParks, int TrailID){//Función que comprueba si un sendero existe
-   if(parkID == existPark(parkID,listOfParks){
-      if(TrailID == ){
-         return true;
+bool existTrail(int parkID ,list<Trail*> listOfTrails, int trailID){//Función que comprueba si un sendero existe
+   for(auto i=listOfTrails.begin(); i!= listOfTrails.end(); i++){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getTrailID() == trailID){
+            return true;
+         }
       }
    }
    return false;
