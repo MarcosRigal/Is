@@ -3,6 +3,7 @@
 #include "../claseSendero/sendero.h"
 #include "../claseRuta/ruta.h"
 #include "../claseMonitor/monitor.h"
+#include "../claseSenderista/senderista.h"
 #include "../claseAdministrativo/administrativo.h"
 #include <iostream>
 
@@ -48,6 +49,15 @@ bool existAdministrator(list<Administrativo*> listOfAdministrators, string dni){
 
 bool existMonitor(list<Monitor*> listOfMonitors, string dni){//Función que comprueba si un monitor existe en el sistema
    for(auto i=listOfMonitors.begin(); i!= listOfMonitors.end(); i++){
+      if((*i)->getDni() == dni){
+         return true;
+      }
+   }
+   return false;
+}
+
+bool existExcursionist(list<Excursionista*> listOfExcursionist, string dni){
+   for(auto i=listOfExcursionist.begin(); i!= listOfExcursionist.end(); i++){
       if((*i)->getDni() == dni){
          return true;
       }
