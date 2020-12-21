@@ -44,3 +44,16 @@ TEST(System, existAdministrativo) {
 
 
 }
+
+TEST(System, DNIIsValid){
+  string dni1="42690761R";                         //Dni correcto
+  string dni2="85290310P";                         //Dni correcto
+  string dni3="29941366A";                         //Dni incorrecto
+  string dni4="78444443B";                         //Dni incorrecto
+
+  EXPECT_TRUE(dniIsValid(dni1));                   //Comprobamos que el 1º Dni es correcto
+  EXPECT_TRUE(dniIsValid(dni2));                   //Comprobamos que el 2º Dni es correcto
+  EXPECT_FALSE(dniIsValid(dni3));                  //Comprobamos que el 3º Dni es incorrecto
+  EXPECT_FALSE(dniIsValid(dni4));                  //Comprobamos que el 4º Dni es incorrecto
+
+}
