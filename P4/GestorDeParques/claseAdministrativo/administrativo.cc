@@ -60,7 +60,7 @@ bool Administrativo::deleteTrail(list<Sendero*> &listOfTrails, Sendero s){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
         if(s.getParkID() == (*i)->getParkID()){
             if(s.getTrailID() == (*i)->getTrailID()){
-                listOfTrails.remove(&s);
+                listOfTrails.remove(*i);
                 return true;
             }
         }
@@ -104,7 +104,7 @@ bool Administrativo::addMonitor(list<Monitor*> &listOfMonitors, Monitor m){
 bool Administrativo::deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m){
     for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
         if(m.getDni() == (*i)->getDni()){
-            listOfMonitors.remove(&m);
+            listOfMonitors.remove(*i);
             return true;
         }
     }
@@ -125,4 +125,43 @@ bool Administrativo::editMonitor(list<Monitor*> &listOfMonitors, Monitor m){
             /* Que hacemos aqui?? */
         }
     }
+}
+
+/* Funciones de administrativo */
+
+bool Administrativo::addAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+    for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
+        if(a.getDni() == i->getDni()){
+            return false;
+        }
+    }
+    listOfAdministrators.push_back(a);
+    return true;
+}
+
+bool Administrativo::deleteAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+    for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
+        if(a.getDni() == i->getDni()){
+            listOfAdministrators.remove(*i);
+            return true;
+        }
+    }
+    return false;
+}
+
+Administrativo Administrativo::viewAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+    for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
+        if(a.getDni() == i->getDni()){
+            return *i;
+        }
+    }
+}
+
+bool Administrativo::editAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+    for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
+        if(a.getDni() == i->getDni()){
+            /* Que hacemos aqui?? */
+        }
+    }
+    return false;
 }

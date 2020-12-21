@@ -31,10 +31,10 @@ class Administrativo : public Trabajador
     bool deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m);
     Monitor* viewMonitor(list<Monitor*> &listOfMonitors, Monitor m);
 
-    bool addAdministrator(list<Administrativo> &listOfAdministrators);
-    bool editAdministrator(list<Administrativo> &listOfAdministrators);
-    bool deleteAdministrator(list<Administrativo> &listOfAdministrators);
-    void viewAdministrator(list<Administrativo> &listOfAdministrators);
+    bool addAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
+    bool editAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
+    bool deleteAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
+    Administrativo viewAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
 
     bool addExcursionist(list<Senderista*> &listOfExcursionists);
     bool editExcursionist(list<Senderista*> &listOfExcursionists);
