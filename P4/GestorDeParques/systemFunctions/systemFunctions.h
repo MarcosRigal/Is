@@ -6,7 +6,7 @@ using namespace std;
 
 void clear();
 bool dniIsValid(string dni);
-bool existAdministrativo(list<Administrativo*> listOfAdministrators, Administrativo a);
+bool existAdministrativo(list<Administrativo*> listOfAdministrators, string dni);
 bool existMonitor(list<Monitor*> listOfMonitors, Monitor m);
 bool existPark(list<Parque*> listOfParks, Parque p);
 bool existRoute(list<Ruta*> listOfRoutes, Ruta r);

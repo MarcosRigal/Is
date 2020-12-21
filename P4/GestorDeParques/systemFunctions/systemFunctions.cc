@@ -37,9 +37,9 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 	return true;                        //Se finalizara obteniendo que el dni introducido es correcto siempre que no se entre en ninguno de los if anteriores
 }
 
-bool existAdministrativo(list<Administrativo*> listOfAdministrators, Administrativo a){//Función que comprueba si un administrativo existe en el sistema
+bool existAdministrativo(list<Administrativo*> listOfAdministrators, string dni){//Función que comprueba si un administrativo existe en el sistema
    for(auto i=listOfAdministrators.begin(); i!= listOfAdministrators.end(); i++){
-      if((*i)->getDni() == a.getDni()){
+      if((*i)->getDni() == dni){
          return true;
       }
    }
