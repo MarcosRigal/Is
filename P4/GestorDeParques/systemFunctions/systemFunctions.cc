@@ -42,6 +42,33 @@ bool existMonitor(string dni)//Función que comprueba si un monitor existe en el
    return false;
 }
 
+bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba si un parque existe
+   for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
+      if(i == parkID){
+         return true;
+      }
+   }
+   return false;
+}
+
+bool existRoute(int parkID, int routeID){//Función que comprueba si una ruta existe
+   if(parkID == existPark(parkID,listOfParks){
+      if(routeID == ){
+         return true;
+      }
+   }
+   return false;
+}
+
+bool existTrail(int parkID, int TrailID){//Función que comprueba si un sendero existe
+   if(parkID == existPark(parkID,listOfParks){
+      if(TrailID == ){
+         return true;
+      }
+   }
+   return false;
+}
+
 void intro()//Función que imprime el menú de inicio
 {
    clear();
