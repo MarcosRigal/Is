@@ -26,7 +26,7 @@ bool Administrativo::deletePark(list<Parque*> &listOfParks, Parque p){
             return true;
         }
     }
-    return false
+    return false;
 }
 
 Parque* Administrativo::viewPark(list<Parque*> &listOfParks, Parque p){
