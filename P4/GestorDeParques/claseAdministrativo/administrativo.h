@@ -8,6 +8,7 @@ class Parque;
 class Monitor;
 class Sendero;
 class Senderista;
+class Monitor;
 
 class Administrativo : public Trabajador
 {
@@ -15,20 +16,20 @@ class Administrativo : public Trabajador
 
     Administrativo(string dni, string email, string address) : Trabajador(dni, email, address){};
 
-    bool addPark(list<Parque*> &listOfParks);
-    bool editPark(list<Parque*> &listOfParks);
-    bool deletePark(list<Parque*> &listOfParks);
-    void viewPark(list<Parque*> &listOfParks);
+    bool addPark(list<Parque*> &listOfParks, Parque p);
+    bool editPark(list<Parque*> &listOfParks, Parque p);
+    bool deletePark(list<Parque*> &listOfParks, Parque p);
+    Parque* viewPark(list<Parque*> &listOfParks, Parque p);
     
-    bool addTrail(list<Sendero*> &listOfParks);
-    bool editTrail(list<Sendero*> &listOfParks);
-    bool deleteTrail(list<Sendero*> &listOfParks);
-    void viewTrail(list<Sendero*> &listOfParks);
+    bool addTrail(list<Sendero*> &listOfTrails, Sendero s);
+    bool editTrail(list<Sendero*> &listOfTrails, Sendero s);
+    bool deleteTrail(list<Sendero*> &listOfTrails, Sendero s);
+    Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s);
 
-    bool addMonitor(list<Monitor*> &listOfMonitors);
-    bool editMonitor(list<Monitor*> &listOfMonitors);
-    bool deleteMonitor(list<Monitor*> &listOfMonitors);
-    void viewMonitor(list<Monitor*> &listOfMonitors);
+    bool addMonitor(list<Monitor*> &listOfMonitors, Monitor m);
+    bool editMonitor(list<Monitor*> &listOfMonitors, Monitor m);
+    bool deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m);
+    Monitor* viewMonitor(list<Monitor*> &listOfMonitors, Monitor m);
 
     bool addAdministrator(list<Administrativo> &listOfAdministrators);
     bool editAdministrator(list<Administrativo> &listOfAdministrators);
