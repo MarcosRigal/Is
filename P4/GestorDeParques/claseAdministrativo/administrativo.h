@@ -16,33 +16,33 @@ class Administrativo : public Trabajador
 
     Administrativo(string dni, string email, string address) : Trabajador(dni, email, address){};
 
-    bool addPark(list<Parque*> &listOfParks, Parque p);
-    bool editPark(list<Parque*> &listOfParks, Parque p);
-    bool deletePark(list<Parque*> &listOfParks, Parque p);
-    Parque* viewPark(list<Parque*> &listOfParks, Parque p);
+    bool addPark(list<Parque*> &listOfParks, int parkID);
+    bool editPark(list<Parque*> &listOfParks, int parkID);
+    bool deletePark(list<Parque*> &listOfParks, int parkID);
+    Parque* viewPark(list<Parque*> &listOfParks, int parkID);
     
-    bool addTrail(list<Sendero*> &listOfTrails, Sendero s);
-    bool editTrail(list<Sendero*> &listOfTrails, Sendero s);
-    bool deleteTrail(list<Sendero*> &listOfTrails, Sendero s);
-    Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s);
+    bool addTrail(list<Sendero*> &listOfTrails, int parkID, int trailID);
+    bool editTrail(list<Sendero*> &listOfTrails, int parkID, int trailID);
+    bool deleteTrail(list<Sendero*> &listOfTrails, int parkID, int trailID);
+    Sendero* viewTrail(list<Sendero*> &listOfTrails, int parkID, int trailID);
 
-    bool addMonitor(list<Monitor*> &listOfMonitors, Monitor m);
-    bool editMonitor(list<Monitor*> &listOfMonitors, Monitor m);
-    bool deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m);
-    Monitor* viewMonitor(list<Monitor*> &listOfMonitors, Monitor m);
+    bool addMonitor(list<Monitor*> &listOfMonitors, string dni);
+    bool editMonitor(list<Monitor*> &listOfMonitors, string dni);
+    bool deleteMonitor(list<Monitor*> &listOfMonitors, string dni);
+    Monitor* viewMonitor(list<Monitor*> &listOfMonitors, string dni);
 
-    bool addAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
-    bool editAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
-    bool deleteAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
-    Administrativo viewAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
+    bool addAdministrator(list<Administrativo> &listOfAdministrators, string dni);
+    bool editAdministrator(list<Administrativo> &listOfAdministrators, string dni);
+    bool deleteAdministrator(list<Administrativo> &listOfAdministrators, string dni);
+    Administrativo viewAdministrator(list<Administrativo> &listOfAdministrators, string dni);
 
-    bool addExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
-    bool editExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
-    bool deleteExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
-    Senderista* viewExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
+    bool addExcursionist(list<Senderista*> &listOfExcursionists, string dni);
+    bool editExcursionist(list<Senderista*> &listOfExcursionists, string dni);
+    bool deleteExcursionist(list<Senderista*> &listOfExcursionists, string dni);
+    Senderista* viewExcursionist(list<Senderista*> &listOfExcursionists, string dni);
 
-    bool addExcursionistToRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s);
-    bool deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s);    
+    bool addExcursionistToRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID, string dni);
+    bool deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID, string dni);    
 
 };
 #endif

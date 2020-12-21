@@ -3,6 +3,7 @@
 #include "../claseSendero/sendero.h"
 #include "../claseRuta/ruta.h"
 #include "../claseMonitor/monitor.h"
+#include "../claseSenderista/senderista.h"
 #include "../claseAdministrativo/administrativo.h"
 #include <iostream>
 
@@ -37,37 +38,46 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 	return true;                        //Se finalizara obteniendo que el dni introducido es correcto siempre que no se entre en ninguno de los if anteriores
 }
 
-bool existAdministrativo(list<Administrativo*> listOfAdministrators, Administrativo a){//Función que comprueba si un administrativo existe en el sistema
+bool existAdministrator(list<Administrativo*> listOfAdministrators, string dni){//Función que comprueba si un administrativo existe en el sistema
    for(auto i=listOfAdministrators.begin(); i!= listOfAdministrators.end(); i++){
-      if((*i)->getDni() == a.getDni()){
+      if((*i)->getDni() == dni){
          return true;
       }
    }
    return false;
 }
 
-bool existMonitor(list<Monitor*> listOfMonitors, Monitor m){//Función que comprueba si un monitor existe en el sistema
+bool existMonitor(list<Monitor*> listOfMonitors, string dni){//Función que comprueba si un monitor existe en el sistema
    for(auto i=listOfMonitors.begin(); i!= listOfMonitors.end(); i++){
-      if((*i)->getDni() == m.getDni()){
+      if((*i)->getDni() == dni){
          return true;
       }
    }
    return false;
 }
 
-bool existPark(list<Parque*> &listOfParks, Parque p){//Función que comprueba si un parque existe
+bool existExcursionist(list<Senderista*> listOfExcursionist, string dni){
+   for(auto i=listOfExcursionist.begin(); i!= listOfExcursionist.end(); i++){
+      if((*i)->getDni() == dni){
+         return true;
+      }
+   }
+   return false;
+}
+
+bool existPark(list<Parque*> &listOfParks, int parkID){//Función que comprueba si un parque existe
    for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
-      if((*i)->getParkID() == p.getParkID()){
+      if((*i)->getParkID() == parkID){
          return true;
       }
    }
    return false;
 }
 
-bool existRoute(list<Ruta*> &listOfRoutes, Ruta r){//Función que comprueba si una ruta existe
+bool existRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){//Función que comprueba si una ruta existe
    for(auto i=listOfRoutes.begin(); i!= listOfRoutes.end(); i++){
-      if((*i)->getParkID() == r.getParkID()){
-         if((*i)->getRouteID() == r.getRouteID()){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getRouteID() == routeID){
             return true;
          }
       }
@@ -75,10 +85,10 @@ bool existRoute(list<Ruta*> &listOfRoutes, Ruta r){//Función que comprueba si u
    return false;
 }
 
-bool existTrail(list<Sendero*> &listOfTrails, Sendero s){//Función que comprueba si un sendero existe
+bool existTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){//Función que comprueba si un sendero existe
    for(auto i=listOfTrails.begin(); i!= listOfTrails.end(); i++){
-      if((*i)->getParkID() == s.getParkID()){
-         if((*i)->getTrailID() == s.getTrailID()){
+      if((*i)->getParkID() == parkID){
+         if((*i)->getTrailID() == trailID){
             return true;
          }
       }
@@ -171,7 +181,7 @@ void shutDown()
 
 int whoIs(string dni)//Función que nos indica si el dni introducido es de un monitor o de un administrador
 {
-   if(existAdministrativo(dni)){return 0;}
+   if(existAdministrator(dni)){return 0;}
    else if(existMonitor(dni)){return 1;}
    return -1;
 }
