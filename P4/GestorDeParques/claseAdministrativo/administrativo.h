@@ -15,10 +15,10 @@ class Administrativo : public Trabajador
 
     Administrativo(string dni, string email, string address) : Trabajador(dni, email, address){};
 
-    bool addPark(list<Parque*> &listOfParks);
-    bool editPark(list<Parque*> &listOfParks);
-    bool deletePark(list<Parque*> &listOfParks);
-    void viewPark(list<Parque*> &listOfParks);
+    bool addPark(list<Parque*> &listOfParks, Parque p);
+    bool editPark(list<Parque*> &listOfParks, Parque p);
+    bool deletePark(list<Parque*> &listOfParks, Parque p);
+    Parque* viewPark(list<Parque*> &listOfParks, Parque p);
     
     bool addTrail(list<Sendero*> &listOfParks);
     bool editTrail(list<Sendero*> &listOfParks);
