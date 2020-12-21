@@ -42,7 +42,7 @@ bool existMonitor(string dni)//Función que comprueba si un monitor existe en el
    return false;
 }
 
-bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba si un parque existe
+bool existPark(int parkID, list<string> listOfParks){//Función que comprueba si un parque existe
    for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
       if(i == parkID){
          return true;
@@ -51,8 +51,8 @@ bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba 
    return false;
 }
 
-bool existRoute(int parkID, int routeID){//Función que comprueba si una ruta existe
-   if(parkID == existPark(parkID,listOfParks){
+bool existRoute(int parkID, list<string> listOfParks, int routeID){//Función que comprueba si una ruta existe
+   if(parkID == existPark(parkID, listOfParks){
       if(routeID == ){
          return true;
       }
@@ -60,7 +60,7 @@ bool existRoute(int parkID, int routeID){//Función que comprueba si una ruta ex
    return false;
 }
 
-bool existTrail(int parkID, int TrailID){//Función que comprueba si un sendero existe
+bool existTrail(int parkID ,list<string> listOfParks, int TrailID){//Función que comprueba si un sendero existe
    if(parkID == existPark(parkID,listOfParks){
       if(TrailID == ){
          return true;
