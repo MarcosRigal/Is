@@ -9,19 +9,19 @@
 
 /* Funciones de parque */
 
-bool Administrativo::addPark(list<Parque*> &listOfParks, Parque p){
+bool Administrativo::addPark(list<Parque*> &listOfParks, int parkID){
     for (auto i=listOfParks.begin(); i!=listOfParks.end(); i++){
-        if(p.getParkID() == (*i)->getParkID()){
+        if(parkID == (*i)->getParkID()){
             return false;
         }
     }
-    listOfParks.push_back(&p);
+    /* Añadimos el parque */
     return true;
 }
 
-bool Administrativo::deletePark(list<Parque*> &listOfParks, Parque p){
+bool Administrativo::deletePark(list<Parque*> &listOfParks, int parkID){
     for (auto i=listOfParks.begin(); i!=listOfParks.end(); i++){
-        if(p.getParkID() == (*i)->getParkID()){
+        if(parkID == (*i)->getParkID()){
             listOfParks.remove(*i);
             return true;
         }
@@ -29,17 +29,17 @@ bool Administrativo::deletePark(list<Parque*> &listOfParks, Parque p){
     return false;
 }
 
-Parque* Administrativo::viewPark(list<Parque*> &listOfParks, Parque p){
+Parque* Administrativo::viewPark(list<Parque*> &listOfParks, int parkID){
     for (auto i = listOfParks.begin(); i!=listOfParks.end(); i++){
-        if(p.getParkID() == (*i)->getParkID()){
+        if(parkID == (*i)->getParkID()){
             return *i;
         }
     }
 }
 
-bool Administrativo::editPark(list<Parque*> &listOfParks, Parque p){
+bool Administrativo::editPark(list<Parque*> &listOfParks, int parkID){
     for (auto i = listOfParks.begin(); i!=listOfParks.end(); i++){
-        if(p.getParkID() == (*i)->getParkID()){
+        if(parkID == (*i)->getParkID()){
             /* Que hacemos aqui?? */
         }
     }
@@ -47,23 +47,23 @@ bool Administrativo::editPark(list<Parque*> &listOfParks, Parque p){
 
 /* Funciones de sendero */
 
-bool Administrativo::addTrail(list<Sendero*> &listOfTrails, Sendero s){
+bool Administrativo::addTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
-        if(s.getParkID() == (*i)->getParkID()){
-            if(s.getTrailID() == (*i)->getTrailID()){
+        if(parkID == (*i)->getParkID()){
+            if(trailID == (*i)->getTrailID()){
                 return false;
             }
         }
     }
 
-    listOfTrails.push_back(&s);
+    /* Añadimos el sendero */
     return true;
 }
 
-bool Administrativo::deleteTrail(list<Sendero*> &listOfTrails, Sendero s){
+bool Administrativo::deleteTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
-        if(s.getParkID() == (*i)->getParkID()){
-            if(s.getTrailID() == (*i)->getTrailID()){
+        if(parkID == (*i)->getParkID()){
+            if(trailID == (*i)->getTrailID()){
                 listOfTrails.remove(*i);
                 return true;
             }
@@ -73,20 +73,20 @@ bool Administrativo::deleteTrail(list<Sendero*> &listOfTrails, Sendero s){
     return false;
 }
 
-Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s){
+Sendero* viewTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
-        if(s.getParkID() == (*i)->getParkID()){
-            if(s.getTrailID() == (*i)->getTrailID()){
+        if(parkID == (*i)->getParkID()){
+            if(trailID == (*i)->getTrailID()){
                 return *i;
             }
         }
     }
 }
 
-bool Administrativo::editTrail(list<Sendero*> &listOfTrails, Sendero s){
+bool Administrativo::editTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
-        if(s.getParkID() == (*i)->getParkID()){
-            if(s.getTrailID() == (*i)->getTrailID()){
+        if(parkID == (*i)->getParkID()){
+            if(trailID == (*i)->getTrailID()){
                 /* Que hacemos aqui?? */
             }
         }
@@ -95,19 +95,19 @@ bool Administrativo::editTrail(list<Sendero*> &listOfTrails, Sendero s){
 
 /* Funciones de monitor */
 
-bool Administrativo::addMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+bool Administrativo::addMonitor(list<Monitor*> &listOfMonitors, string dni){
     for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
-        if(m.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             return false;
         }
     }
-    listOfMonitors.push_back(&m);
+    /* Añadimos el monitor */
     return true;
 }
 
-bool Administrativo::deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+bool Administrativo::deleteMonitor(list<Monitor*> &listOfMonitors, string dni){
     for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
-        if(m.getDni() == (*i)->getDni()){
+        if(dni== (*i)->getDni()){
             listOfMonitors.remove(*i);
             return true;
         }
@@ -115,17 +115,17 @@ bool Administrativo::deleteMonitor(list<Monitor*> &listOfMonitors, Monitor m){
     return false;
 }
 
-Monitor* Administrativo::viewMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+Monitor* Administrativo::viewMonitor(list<Monitor*> &listOfMonitors, string dni){
     for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
-        if(m.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             return *i;
         }
     }  
 }
 
-bool Administrativo::editMonitor(list<Monitor*> &listOfMonitors, Monitor m){
+bool Administrativo::editMonitor(list<Monitor*> &listOfMonitors, string dni){
     for(auto i = listOfMonitors.begin(); i!=listOfMonitors.end(); i++){
-        if(m.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             /* Que hacemos aqui?? */
         }
     }
@@ -133,19 +133,19 @@ bool Administrativo::editMonitor(list<Monitor*> &listOfMonitors, Monitor m){
 
 /* Funciones de administrativo */
 
-bool Administrativo::addAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+bool Administrativo::addAdministrator(list<Administrativo> &listOfAdministrators, string dni){
     for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
-        if(a.getDni() == i->getDni()){
+        if(dni == i->getDni()){
             return false;
         }
     }
-    listOfAdministrators.push_back(a);
+    /* Añadir el administrativo */
     return true;
 }
 
-bool Administrativo::deleteAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+bool Administrativo::deleteAdministrator(list<Administrativo> &listOfAdministrators, string dni){
     for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
-        if(a.getDni() == i->getDni()){
+        if(dni == i->getDni()){
             listOfAdministrators.remove(*i);
             return true;
         }
@@ -153,17 +153,17 @@ bool Administrativo::deleteAdministrator(list<Administrativo> &listOfAdministrat
     return false;
 }
 
-Administrativo Administrativo::viewAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+Administrativo Administrativo::viewAdministrator(list<Administrativo> &listOfAdministrators, string dni){
     for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
-        if(a.getDni() == i->getDni()){
+        if(dni == i->getDni()){
             return *i;
         }
     }
 }
 
-bool Administrativo::editAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a){
+bool Administrativo::editAdministrator(list<Administrativo> &listOfAdministrators, string dni){
     for(auto i = listOfAdministrators.begin(); i!=listOfAdministrators.end(); i++){
-        if(a.getDni() == i->getDni()){
+        if(dni == i->getDni()){
             /* Que hacemos aqui?? */
         }
     }
@@ -172,19 +172,19 @@ bool Administrativo::editAdministrator(list<Administrativo> &listOfAdministrator
 
 /* Funciones senderista */
 
-bool Administrativo::addExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+bool Administrativo::addExcursionist(list<Senderista*> &listOfExcursionists, string dni){
     for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
-        if(s.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             return false;
         }
     }
-    listOfExcursionists.push_back(&s);
+    /* Añadimos el senderista */
     return true;
 }
 
-bool Administrativo::deleteExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+bool Administrativo::deleteExcursionist(list<Senderista*> &listOfExcursionists, string dni){
     for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
-        if(s.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             listOfExcursionists.remove(*i);
             return true;
         }
@@ -192,17 +192,17 @@ bool Administrativo::deleteExcursionist(list<Senderista*> &listOfExcursionists, 
     return false;
 }
 
-Senderista* Administrativo::viewExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+Senderista* Administrativo::viewExcursionist(list<Senderista*> &listOfExcursionists, string dni){
     for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
-        if(s.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             return *i;
         }
     }
 }
 
-bool Administrativo::editExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+bool Administrativo::editExcursionist(list<Senderista*> &listOfExcursionists, string dni){
     for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
-        if(s.getDni() == (*i)->getDni()){
+        if(dni == (*i)->getDni()){
             /* Que hacemos aqui */
         }
     }
@@ -210,34 +210,34 @@ bool Administrativo::editExcursionist(list<Senderista*> &listOfExcursionists, Se
 
 /* Funciones añadir y borrar senderista de una ruta */
 
-bool Administrativo::addExcursionistToRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s){
+bool Administrativo::addExcursionistToRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID, string dni){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
-                for(auto j = r.getExcursionistDNI().begin(); j!=r.getExcursionistDNI().end(); j++){
-                    if(*j == s.getDni()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID== (*i)->getRouteID()){
+                for(auto j = (*i)->getExcursionistDNI().begin(); j!=(*i)->getExcursionistDNI().end(); j++){
+                    if(*j == dni){
                         return false;
                     }
                 } 
             }
         }
     }
-    r.setExcursionistDni(s.getDni());
+    /* Añadimos el senderista a la ruta */
     return true;
 }
 
-bool Administrativo::deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, Ruta r, Senderista s){
+bool Administrativo::deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID, string dni){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
         if(r.getParkID() == (*i)->getParkID()){
             if(r.getRouteID() == (*i)->getRouteID()){
                 for(auto j = r.getExcursionistDNI().begin(); j!=r.getExcursionistDNI().end(); j++){
                     if(*j == s.getDni()){
-                        /* Que hacemos aqui */
+                        /* Borramos el senderista de la ruta */
+                        return true
                     }
                 } 
             }
         }
     }
-    r.setExcursionistDni(s.getDni());
-    return true;
+    return false;
 }

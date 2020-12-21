@@ -2,22 +2,22 @@
 #include "../claseParque/parque.h"
 #include "../claseRuta/ruta.h"
 
-bool Trabajador::addRoute(list<Ruta*> &listOfRoutes, Ruta r){
+bool Trabajador::addRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID == (*i)->getRouteID()){
                 return false;
             }
         }
     }
-    listOfRoutes.push_back(&r);
+    /* Añadimos la ruta */
     return true;
 }
 
-bool Trabajador::deleteRoute(list<Ruta*> &listOfRoutes, Ruta r){
+bool Trabajador::deleteRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID == (*i)->getRouteID()){
                 listOfRoutes.remove(*i);
                 return true;
             }
@@ -26,20 +26,20 @@ bool Trabajador::deleteRoute(list<Ruta*> &listOfRoutes, Ruta r){
     return false;
 }
 
-Ruta* Trabajador::viewRoute(list<Ruta*> &listOfRoutes, Ruta r){
+Ruta* Trabajador::viewRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID== (*i)->getRouteID()){
                 return *i;
             }
         }
     }
 }
 
-bool Trabajador::editRoute(list<Ruta*> &listOfRoutes, Ruta r){
+bool Trabajador::editRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID == (*i)->getRouteID()){
                 /* Que hacemos aqui?? */
             }
         }
