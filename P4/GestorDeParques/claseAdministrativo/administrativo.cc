@@ -228,12 +228,12 @@ bool Administrativo::addExcursionistToRoute(list<Ruta*> &listOfRoutes, int parkI
 
 bool Administrativo::deleteExcursionistFromRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID, string dni){
     for(auto i = listOfRoutes.begin(); i!=listOfRoutes.end(); i++){
-        if(r.getParkID() == (*i)->getParkID()){
-            if(r.getRouteID() == (*i)->getRouteID()){
-                for(auto j = r.getExcursionistDNI().begin(); j!=r.getExcursionistDNI().end(); j++){
-                    if(*j == s.getDni()){
+        if(parkID == (*i)->getParkID()){
+            if(routeID == (*i)->getRouteID()){
+                for(auto j = (*i)->getExcursionistDNI().begin(); j!=(*i)->getExcursionistDNI().end(); j++){
+                    if(*j == dni){
                         /* Borramos el senderista de la ruta */
-                        return true
+                        return true;
                     }
                 } 
             }
