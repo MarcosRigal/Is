@@ -33,12 +33,12 @@ TEST(System, existAdministrativo) {
   
   EXPECT_FALSE(listOfAdministrators.empty());                       //Comprobamos que la lista no está vacía
   EXPECT_EQ(listOfAdministrators.size(), 3);                        //Comprobamos que el tamaño de la lista de incidencias sea 3
-  EXPECT_TRUE(existAdministrativo(listOfAdministrators, dni1));     //Comprobamos que el administrativo con dni1 este en la lista
-  EXPECT_TRUE(existAdministrativo(listOfAdministrators, dni2));     //Comprobamos que el administrativo con dni2 este en la lista
-  EXPECT_TRUE(existAdministrativo(listOfAdministrators, dni3));     //Comprobamos que el administrativo con dni3 este en la lista
+  EXPECT_TRUE(existAdministrator(listOfAdministrators, dni1));     //Comprobamos que el administrativo con dni1 este en la lista
+  EXPECT_TRUE(existAdministrator(listOfAdministrators, dni2));     //Comprobamos que el administrativo con dni2 este en la lista
+  EXPECT_TRUE(existAdministrator(listOfAdministrators, dni3));     //Comprobamos que el administrativo con dni3 este en la lista
 
   string dni4 = "4444444";
-  EXPECT_FALSE(existAdministrativo(listOfAdministrators, dni4));    //Comprobamos que el administrativo con dni4 no este en la lista
+  EXPECT_FALSE(existAdministrator(listOfAdministrators, dni4));    //Comprobamos que el administrativo con dni4 no este en la lista
   
 
 
