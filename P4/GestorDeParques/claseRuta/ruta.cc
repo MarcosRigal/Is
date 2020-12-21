@@ -65,6 +65,7 @@ bool Ruta::setRouteID(int const &parkID,int const &routeID){
 
 bool Ruta::setTraversedTrails(list<int> traversedTrails){
    for(auto i=traversedTrails.begin(); i!=traversedTrails.end(); i++){
-       if()
+
    }
+
 }
