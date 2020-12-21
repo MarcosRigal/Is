@@ -6,11 +6,11 @@ using namespace std;
 
 void clear();
 bool dniIsValid(string dni);
-bool existAdministrativo(string dni);
-bool existMonitor(string dni);
-bool existPark(int parkID, list<Parque*> listOfParks);
-bool existRoute(int parkID, list<Ruta*> listOfParks, int routeID);
-bool existTrail(int parkID, list<Sendero*> listOfParks, int TrailID);
+bool existAdministrativo(list<Administrativo*> listOfAdministrators, Administrativo a);
+bool existMonitor(list<Monitor*> listOfMonitors, Monitor m);
+bool existPark(list<Parque*> listOfParks, Parque p);
+bool existRoute(list<Ruta*> listOfRoutes, Ruta r);
+bool existTrail(list<Sendero*> listOfTrails, Sendero s);
 void intro();
 string login();
 int whoIs(string dni);
