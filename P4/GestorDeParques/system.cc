@@ -1,11 +1,12 @@
 #include "../GestorDeParques/systemFunctions/systemFunctions.h"
+#include "../GestorDeParques/claseParque/parque.h"
 
 int main()
 {
    intro();
    int select = 0, subSelect = 0;
    string dni = login();
-   list<string> listOfParks;
+   list<Parque*> &listOfParks;
    
    switch (whoIs(dni))
    {
