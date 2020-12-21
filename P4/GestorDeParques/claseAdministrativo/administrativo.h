@@ -36,10 +36,10 @@ class Administrativo : public Trabajador
     bool deleteAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
     Administrativo viewAdministrator(list<Administrativo> &listOfAdministrators, Administrativo a);
 
-    bool addExcursionist(list<Senderista*> &listOfExcursionists);
-    bool editExcursionist(list<Senderista*> &listOfExcursionists);
-    bool deleteExcursionist(list<Senderista*> &listOfExcursionists);
-    void viewExcursionist(list<Senderista*> &listOfExcursionists);
+    bool addExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
+    bool editExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
+    bool deleteExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
+    Senderista* viewExcursionist(list<Senderista*> &listOfExcursionists, Senderista s);
 
     bool addExcursionistToRoute(list<Parque*> &listOfParks, list<Senderista*> &listOfExcursionists);
     bool deleteExcursionistFromRoute(list<Parque*> &listOfParks, list<Senderista*> &listOfExcursionists);    

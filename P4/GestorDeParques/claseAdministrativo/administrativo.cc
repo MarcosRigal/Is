@@ -2,6 +2,9 @@
 #include "../claseParque/parque.h"
 #include "../claseSendero/sendero.h"
 #include "../claseMonitor/monitor.h"
+#include "../claseSenderista/senderista.h"
+
+
 
 /* Funciones de parque */
 
@@ -69,7 +72,7 @@ bool Administrativo::deleteTrail(list<Sendero*> &listOfTrails, Sendero s){
     return false;
 }
 
-Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s{
+Sendero* viewTrail(list<Sendero*> &listOfTrails, Sendero s){
     for (auto i = listOfTrails.begin(); i!=listOfTrails.end(); i++){
         if(s.getParkID() == (*i)->getParkID()){
             if(s.getTrailID() == (*i)->getTrailID()){
@@ -164,4 +167,42 @@ bool Administrativo::editAdministrator(list<Administrativo> &listOfAdministrator
         }
     }
     return false;
+}
+
+/* Funciones senderista */
+
+bool Administrativo::addExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+    for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
+        if(s.getDni() == (*i)->getDni()){
+            return false;
+        }
+    }
+    listOfExcursionists.push_back(&s);
+    return true;
+}
+
+bool Administrativo::deleteExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+    for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
+        if(s.getDni() == (*i)->getDni()){
+            listOfExcursionists.remove(*i);
+            return true;
+        }
+    }
+    return false;
+}
+
+Senderista* Administrativo::viewExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+    for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
+        if(s.getDni() == (*i)->getDni()){
+            return *i;
+        }
+    }
+}
+
+bool Administrativo::editExcursionist(list<Senderista*> &listOfExcursionists, Senderista s){
+    for(auto i = listOfExcursionists.begin(); i!=listOfExcursionists.end(); i++){
+        if(s.getDni() == (*i)->getDni()){
+            /* Que hacemos aqui */
+        }
+    }
 }
