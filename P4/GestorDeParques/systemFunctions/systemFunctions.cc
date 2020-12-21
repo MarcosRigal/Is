@@ -42,9 +42,9 @@ bool existMonitor(string dni)//Función que comprueba si un monitor existe en el
    return false;
 }
 
-bool existPark(int parkID, list<string> listOfParks){//Función que comprueba si un parque existe
+bool existPark(int parkID, list<Parque*> &listOfParks){//Función que comprueba si un parque existe
    for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
-      if(i == parkID){
+      if((*i)->getParkID() == parkID){
          return true;
       }
    }
