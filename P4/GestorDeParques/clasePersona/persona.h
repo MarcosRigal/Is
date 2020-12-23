@@ -21,10 +21,10 @@ class Persona{
         inline string getDni() { return dni_; }
         inline string getBirthday() { return birthday_; }
 
-        bool setName(string name) {if(name.empty()){return false;}name_ = name; return true;}
-        bool setSurnames(string surnames) {if(surnames.empty()){return false;} surnames_ = surnames; return true;}
-        bool setDni(string dni){if(dni.empty()){return false;}dni_=dni; return true;}
-        bool setBirthday(string birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
+        inline bool setName(string name) {if(name.empty()){return false;}name_ = name; return true;}
+        inline bool setSurnames(string surnames) {if(surnames.empty()){return false;} surnames_ = surnames; return true;}
+        inline bool setDni(string dni){if(dni.empty()){return false;}dni_=dni; return true;}
+        inline bool setBirthday(string birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
 
 };
 #endif

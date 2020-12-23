@@ -24,10 +24,10 @@ class Sendero{
       inline int getTrailID() { return trailID_; }
       inline bool getTrailStatus() { return trailStatus_; }
 
-      bool setDifficultyLevel(int difficultyLevel){if(difficultyLevel<1 || difficultyLevel>10){return false;}difficultyLevel_=difficultyLevel_; return true;}
+      inline bool setDifficultyLevel(int difficultyLevel){if(difficultyLevel<1 || difficultyLevel>10){return false;}difficultyLevel_=difficultyLevel_; return true;}
       inline bool setName(string name) {if(name.empty()){return false;} name_ = name; return true;}
-      bool setTrailParkID(int trailParkID){if(trailParkID<1){return false;}trailParkID_=trailParkID; return true;}
-      bool setTrailID(int trailID){if(trailID<1){return false;}trailID_=trailID; return true;}
+      inline bool setTrailParkID(int trailParkID){if(trailParkID<1){return false;}trailParkID_=trailParkID; return true;}
+      inline bool setTrailID(int trailID){if(trailID<1){return false;}trailID_=trailID; return true;}
       inline bool setTrailStatus(bool trailStatus){trailStatus_ = trailStatus; return true;}
 
 };
