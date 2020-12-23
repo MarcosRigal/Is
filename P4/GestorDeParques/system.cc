@@ -10,7 +10,9 @@ int main()
    Administrativo a("32731909B", "Marcos", "14/03/2001", "Rivera Gavilán", "riveragavilanmarcos@gmail.com", "Calle calle");
    list<Administrativo> listOfAdministrators;
    listOfAdministrators.push_back(a);
+   Monitor m("30481124Y", "David", "15/03/2001", "Perez Dueñas", "i92pedud@uco.es", "Plaza Plaza", 622591804);
    list<Monitor> listOfMonitors;
+   listOfMonitors.push_back(m);
 
    switch (whoIs(listOfAdministrators, listOfMonitors, dni))
    {
