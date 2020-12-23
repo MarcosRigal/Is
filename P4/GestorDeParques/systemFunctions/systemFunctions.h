@@ -6,11 +6,11 @@ using namespace std;
 
 void clear();
 bool dniIsValid(string dni);
-bool existAdministrator(string dni);
-bool existMonitor(string dni);
+bool existAdministrator(list<Administrativo> listOfAdministrators, string dni);
+bool existMonitor(list<Monitor> listOfMonitors, string dni);
 void intro();
 string login();
-int whoIs(string dni);
+int whoIs(list<Administrativo> listOfAdministrators, list<Monitor> listOfMonitors,string dni);
 int menuAdministrativo();
 int menuMonitor();
 void errorUserNotFound();

@@ -26,7 +26,7 @@ class Ruta{
 
     public:
 
-    Ruta(int routeParkID, int routeID, string name, string dniMonitor, string dniMonitorAlternate, string modality, int numberOfPlaces, float duration, bool exclusiveness= false){setRouteParkID(routeParkID); setRouteID(routeID); setName(name); setDniMonitor(dniMonitor); setDniMonitorAlternate(dniMonitorAlternate); setModality(modality); setNumberOfPlaces(numberOfPlaces); setDuration(duration); setExclusiveness(exclusiveness);}
+    Ruta(int routeParkID, int routeID, string name, string dniMonitor, string dniMonitorAlternate, string modality, int numberOfPlaces, float duration, list<int> idTraversedTrails, bool exclusiveness= false){setRouteParkID(routeParkID); setRouteID(routeID); setName(name); setDniMonitor(dniMonitor); setDniMonitorAlternate(dniMonitorAlternate); setModality(modality); setNumberOfPlaces(numberOfPlaces); setDuration(duration); setTraversedTrails(idTraversedTrails); setExclusiveness(exclusiveness);}
     
     inline string getAdaptations() {return adaptations_;}
     inline string getDniMonitor() {return dniMonitor_;}
@@ -46,7 +46,7 @@ class Ruta{
     inline bool setAdaptations(string adapts){if(adapts.empty()){return false;} adaptations_=adapts; return true;}
     inline bool setDniMonitor(string dniMonitor){if(dniMonitor.empty()){return false;}dniMonitor_=dniMonitor; return true;}
     inline bool setDniMonitorAlternate(string dniMonitorAlternate){if(dniMonitorAlternate.empty()){return false;}dniMonitorAlternate_=dniMonitorAlternate; return true;}
-    inline bool setIncidences(list<string> incidences){if(incidences.empty()){return false;}incidences_=incidences;return true;}           //A la funcion hay que pasarle un string, no una lista de strings
+    inline bool setIncidences(list<string> incidences){if(incidences.empty()){return false;}incidences_ = incidences;return true;}           //A la funcion hay que pasarle un string, no una lista de strings
     inline bool setExcursionistDni(list<string> excursionistDNI){if(excursionistDNI.empty()){return false;}excursionistDNI_=excursionistDNI;return true;}
     inline bool setDuration(float duration){if(duration<=0){return false;}duration_=duration; return true;}
     inline bool setExclusiveness(bool exclusiveness){exclusiveness_=exclusiveness; return true;}

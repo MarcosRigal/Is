@@ -7,8 +7,10 @@ int main()
    intro();
    int select = 0, subSelect = 0;
    string dni = login();
-   
-   switch (whoIs(dni))
+   list<Administrativo> listOfAdministrators;
+   list<Monitor> listOfMonitors;
+
+   switch (whoIs(listOfAdministrators, listOfMonitors, dni))
    {
    case 0:
       do

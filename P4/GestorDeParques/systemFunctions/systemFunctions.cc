@@ -34,11 +34,25 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 	return true;                        //Se finalizara obteniendo que el dni introducido es correcto siempre que no se entre en ninguno de los if anteriores
 }
 
-bool existAdministrator(string dni){//Función que comprueba si un administrativo existe en el sistema
-   return true;
+bool existAdministrator(list<Administrativo> listOfAdministrators, string dni){//Función que comprueba si un administrativo existe en el sistema
+   for(auto i = listOfAdministrators.begin(); i != listOfAdministrators.end(); i++)
+   {
+      if (i->getDni()==dni)
+      {
+         return true;
+      }
+   }
+   return false;
 }
 
-bool existMonitor(string dni){//Función que comprueba si un monitor existe en el sistema
+bool existMonitor(list<Monitor> listOfMonitors, string dni){//Función que comprueba si un monitor existe en el sistema
+   for(auto i = listOfMonitors.begin(); i != listOfMonitors.end(); i++)
+   {
+      if (i->getDni()==dni)
+      {
+         return true;
+      }
+   }
    return false;
 }
 
@@ -125,10 +139,10 @@ void shutDown()
    exit(-1);  
 }
 
-int whoIs(string dni)//Función que nos indica si el dni introducido es de un monitor o de un administrador
+int whoIs(list<Administrativo> listOfAdministrators, list<Monitor> listOfMonitors,string dni)//Función que nos indica si el dni introducido es de un monitor o de un administrador
 {
-   if(existAdministrator(dni)){return 0;}
-   else if(existMonitor(dni)){return 1;}
+   if(existAdministrator(listOfAdministrators,dni)){return 0;}
+   else if(existMonitor(listOfMonitors,dni)){return 1;}
    return -1;
 }
 

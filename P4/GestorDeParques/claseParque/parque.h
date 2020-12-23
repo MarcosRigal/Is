@@ -1,6 +1,7 @@
 #ifndef PARQUE_H
 #define PARQUE_H
 #include <string>
+
 using namespace std;
 
 class Parque{
@@ -18,7 +19,7 @@ class Parque{
 
     public:
 
-    Parque(int parkID, string name, float area, string location, string town, string province, string awards, string declarationDate, string hours){setParkID(parkID); setArea(area); setDeclarationDate(declarationDate); setHours(hours); setLocation(location); setName(name); setProvince(province); setTown(town);}
+    Parque(int parkID, string name, float area, string location, string town, string province, string awards, string declarationDate, string hours){setParkID(parkID); setName(name); setArea(area); setLocation(location); setTown(town); setProvince(province); setAwards(awards); setDeclarationDate(declarationDate); setHours(hours);}
     
     inline string getTown() {return town_;}
     inline float getArea() {return area_;}

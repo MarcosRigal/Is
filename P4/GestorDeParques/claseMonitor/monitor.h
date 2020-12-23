@@ -2,9 +2,8 @@
 #define MONITOR_H 
 #include <iostream>
 #include "../claseTrabajador/trabajador.h"
-using namespace std;
 
-class Parque;
+using namespace std;
 
 class Monitor : public Trabajador
 {
