@@ -3,16 +3,15 @@
 #include <string>
 
 
-TEST(Route, PlacesLeft){
-    string DniMonitor="42690761R";
-    list<int> Trails;
-    Ruta r (DniMonitor,1,1,Trails,70);
-
-    for(int i=0 ;i<50 ;i++){
-        string dni="1111111i";
-        r.setExcursionistDni(dni);
+TEST(Route, PlacesLeft)
+{
+    Ruta r(1, 1, "Ruta1", "32731909B", "30481124Y", "Bicicleta", 70, 2.5, false);
+    list<string> excursionistDNI;
+    for (int i = 0; i < 50; i++)
+    {
+        excursionistDNI.push_back("11111111A");
     }
+    r.setExcursionistDni(excursionistDNI);
 
     EXPECT_EQ(20,r.placesLeft());
-
 }

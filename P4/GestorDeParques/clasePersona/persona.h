@@ -14,17 +14,17 @@ class Persona{
 
     public:
 
-        inline Persona(string const &dni){setDni(dni);}
+        inline Persona(string dni, string name, string birthday, string surnames = ""){setDni(dni); setName(name); setSurnames(surnames); setBirthday(birthday);}
 
-        inline string getName() const { return name_; }
-        inline string getSurname() const { return surnames_; }
-        inline string getDni() const { return dni_; }
-        inline string getBirthday() const { return birthday_; }
+        inline string getName() { return name_; }
+        inline string getSurnames() { return surnames_; }
+        inline string getDni() { return dni_; }
+        inline string getBirthday() { return birthday_; }
 
-        bool setName(string const name) {if(name.empty()){return false;}name_ = name; return true;}
-        bool setSurname(string const surnames) {if(surnames.empty()){return false;} surnames_ = surnames; return true;}
-        bool setDni(string const &dni);
-        bool setBirthday(string const birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
+        bool setName(string name) {if(name.empty()){return false;}name_ = name; return true;}
+        bool setSurnames(string surnames) {if(surnames.empty()){return false;} surnames_ = surnames; return true;}
+        bool setDni(string dni){if(dni.empty()){return false;}dni_=dni; return true;}
+        bool setBirthday(string birthday) {if(birthday.empty()){return false;} birthday_ = birthday; return true;}
 
 };
 #endif

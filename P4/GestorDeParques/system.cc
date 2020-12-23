@@ -1,12 +1,12 @@
 #include "../GestorDeParques/systemFunctions/systemFunctions.h"
-#include "../claseParque/parque.h"
+#include <list>
+using namespace std;
 
 int main()
 {
    intro();
    int select = 0, subSelect = 0;
    string dni = login();
-   list<Parque*> &listOfParks;
    
    switch (whoIs(dni))
    {
@@ -155,7 +155,7 @@ int main()
             break;
          }
       }while (select!=0);
-      exit(0);
+      ::exit(0);
       break;
    
    case 1:
@@ -227,7 +227,7 @@ int main()
             break;
          }
       }while (select!=0);
-      exit(0);
+      ::exit(0);
       break;
 
    default:

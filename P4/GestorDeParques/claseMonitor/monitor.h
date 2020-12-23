@@ -16,18 +16,18 @@ class Monitor : public Trabajador
 
     public:
 
-        Monitor(string dni, string email, string address, int phoneNumber) : Trabajador(dni, email, address) {setPhoneNumber(phoneNumber);status_=true; workedHours_=0;};
+        Monitor(string dni, string name, string birthday, string surnames, string email, string address, int phoneNumber) : Trabajador(dni, name, birthday, surnames, email, address) {setPhoneNumber(phoneNumber);setStatus(true); setWorkedHours(0);}
         
-        int getPhoneNumber() const { return phoneNumber_; }
-        float getWorkedHours() const { return workedHours_; }
-        bool getStatus() const { return status_; }
+        inline int getPhoneNumber() { return phoneNumber_;}
+        inline float getWorkedHours() { return workedHours_;}
+        inline bool getStatus() { return status_;}
 
-        bool setPhoneNumber(int phoneNumber){if(phoneNumber<=0){return false;} phoneNumber_=phoneNumber; return true;}
-        bool setWorkedHours(float workedHours){if(workedHours<=0){return false;} workedHours_=workedHours; return true;};
-        bool setStatus(bool status){status_=status;return true;};
+        inline bool setPhoneNumber(int phoneNumber){if(phoneNumber<100000000 || phoneNumber>999999999){return false;} phoneNumber_=phoneNumber; return true;}
+        inline bool setWorkedHours(float workedHours){if(workedHours<0){return false;} workedHours_=workedHours; return true;}
+        inline bool setStatus(bool status){status_=status;return true;}
 
-        bool notifyIncidentOnRoute(list<Ruta*> &listOfRoutes, string incidence, int parkID, int routeID);
-        void getRouteReport(list<Ruta*> &listOfRoutes, int parkID, int routeID);
+        bool notifyIncidentOnRoute(list<Ruta> &listOfRoutes, int parkID, int routeID, string incidence);
+        void getRouteReport(list<Ruta> &listOfRoutes, int parkID, int routeID);
 
 };
 #endif

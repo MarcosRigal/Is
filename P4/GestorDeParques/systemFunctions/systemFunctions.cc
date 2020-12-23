@@ -1,11 +1,7 @@
 #include "systemFunctions.h"
-#include "../claseParque/parque.h"
-#include "../claseSendero/sendero.h"
-#include "../claseRuta/ruta.h"
-#include "../claseMonitor/monitor.h"
-#include "../claseSenderista/senderista.h"
-#include "../claseAdministrativo/administrativo.h"
 #include <iostream>
+#include <fstream>
+#include <stdlib.h>
 
 void clear(){//Funcion que limpia la terminal en función del sistema operativo que estemos utilizando
 	#ifdef _WIN32
@@ -38,61 +34,11 @@ bool dniIsValid(string dni)//Función que comprueba si un dni es válido
 	return true;                        //Se finalizara obteniendo que el dni introducido es correcto siempre que no se entre en ninguno de los if anteriores
 }
 
-bool existAdministrator(list<Administrativo*> listOfAdministrators, string dni){//Función que comprueba si un administrativo existe en el sistema
-   for(auto i=listOfAdministrators.begin(); i!= listOfAdministrators.end(); i++){
-      if((*i)->getDni() == dni){
-         return true;
-      }
-   }
-   return false;
+bool existAdministrator(string dni){//Función que comprueba si un administrativo existe en el sistema
+   return true;
 }
 
-bool existMonitor(list<Monitor*> listOfMonitors, string dni){//Función que comprueba si un monitor existe en el sistema
-   for(auto i=listOfMonitors.begin(); i!= listOfMonitors.end(); i++){
-      if((*i)->getDni() == dni){
-         return true;
-      }
-   }
-   return false;
-}
-
-bool existExcursionist(list<Senderista*> listOfExcursionist, string dni){
-   for(auto i=listOfExcursionist.begin(); i!= listOfExcursionist.end(); i++){
-      if((*i)->getDni() == dni){
-         return true;
-      }
-   }
-   return false;
-}
-
-bool existPark(list<Parque*> &listOfParks, int parkID){//Función que comprueba si un parque existe
-   for(auto i=listOfParks.begin(); i!= listOfParks.end(); i++){
-      if((*i)->getParkID() == parkID){
-         return true;
-      }
-   }
-   return false;
-}
-
-bool existRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID){//Función que comprueba si una ruta existe
-   for(auto i=listOfRoutes.begin(); i!= listOfRoutes.end(); i++){
-      if((*i)->getParkID() == parkID){
-         if((*i)->getRouteID() == routeID){
-            return true;
-         }
-      }
-   }
-   return false;
-}
-
-bool existTrail(list<Sendero*> &listOfTrails, int parkID, int trailID){//Función que comprueba si un sendero existe
-   for(auto i=listOfTrails.begin(); i!= listOfTrails.end(); i++){
-      if((*i)->getParkID() == parkID){
-         if((*i)->getTrailID() == trailID){
-            return true;
-         }
-      }
-   }
+bool existMonitor(string dni){//Función que comprueba si un monitor existe en el sistema
    return false;
 }
 
@@ -171,7 +117,7 @@ void shutDown()
    cout<<"|                                                   |\n";
    cout<<"|                                                   |\n";
    cout<<"|                                                   |\n";
-   cout<<"|  El sistema se está apagando, por favor espere    |\n";
+   cout<<"|          Cerrando sesión, por favor espere        |\n";
    cout<<"|                                                   |\n";
    cout<<"|                                                   |\n";
    cout<<"|                                                   |\n";

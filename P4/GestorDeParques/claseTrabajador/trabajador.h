@@ -4,9 +4,9 @@
 #include <string>
 #include <list>
 #include "../clasePersona/persona.h"
+#include "../claseRuta/ruta.h"
 using namespace std;
 
-class Ruta;
 
 class Trabajador : public Persona
 {
@@ -17,18 +17,18 @@ class Trabajador : public Persona
 
     public:
 
-        Trabajador(string dni, string email, string address) : Persona(dni) {email_=email; address_=address;}
+        Trabajador(string dni, string name, string birthday, string surnames, string email, string address) : Persona(dni, name, birthday, surnames) {setEmail(email); setAddress(address);}
 
-        string getAddress() const { return address_; }
-        string getEmail() const { return email_; }
+        string getAddress() { return address_; }
+        string getEmail() { return email_; }
 
-        bool setAddress(string address) {if(address.empty()){return false;} address_ = address; return true; }
-        bool setEmail(string email) {if(email.empty()){return false;} email_ = email; return true; }
+        inline bool setAddress(string address) {if(address.empty()){return false;} address_ = address; return true; }
+        inline bool setEmail(string email) {if(email.empty()){return false;} email_ = email; return true; }
 
-        bool addRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID);
-        bool editRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID);
-        bool deleteRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID);
-        Ruta* viewRoute(list<Ruta*> &listOfRoutes, int parkID, int routeID);
+        bool addRoute(list<Ruta> &listOfRoutes, int parkID, int routeID);
+        bool editRoute(list<Ruta> &listOfRoutes, int parkID, int routeID);
+        bool deleteRoute(list<Ruta> &listOfRoutes, int parkID, int routeID);
+        Ruta viewRoute(list<Ruta> &listOfRoutes, int parkID, int routeID);
 
 };
 #endif
