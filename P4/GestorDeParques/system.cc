@@ -7,7 +7,9 @@ int main()
    intro();
    int select = 0, subSelect = 0;
    string dni = login();
+   Administrativo a("32731909B", "Marcos", "14/03/2001", "Rivera Gavilán", "riveragavilanmarcos@gmail.com", "Calle calle");
    list<Administrativo> listOfAdministrators;
+   listOfAdministrators.push_back(a);
    list<Monitor> listOfMonitors;
 
    switch (whoIs(listOfAdministrators, listOfMonitors, dni))

@@ -37,7 +37,7 @@ class Parque{
     inline bool setHours(string hours){if(hours.empty()){return false;}hours_=hours; return true;}
     inline bool setLocation(string location){if(location.empty()){return false;}location_=location; return true;}
     inline bool setName(string name){if(name.empty()){return false;}name_=name; return true;}
-    bool setParkID(int parkID){if(parkID<1){return false;}parkID_= parkID; return true;}
+    inline bool setParkID(int parkID){if(parkID<1){return false;}parkID_= parkID; return true;}
     inline bool setProvince(string province){if(province.empty()){return false;}province_=province; return true;}
     inline bool setTown(string town){if(town.empty()){return false;}town_=town; return true;}
 

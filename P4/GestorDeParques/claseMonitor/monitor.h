@@ -25,8 +25,8 @@ class Monitor : public Trabajador
         inline bool setWorkedHours(float workedHours){if(workedHours<0){return false;} workedHours_=workedHours; return true;}
         inline bool setStatus(bool status){status_=status;return true;}
 
-        bool notifyIncidentOnRoute(list<Ruta> &listOfRoutes, int parkID, int routeID, string incidence);
-        void getRouteReport(list<Ruta> &listOfRoutes, int parkID, int routeID);
+        bool notifyIncidentOnRoute(list<Ruta> &listOfRoutes, int routeParkID, int routeID, string incidence);
+        void getRouteReport(list<Ruta> listOfRoutes, int routeParkID, int routeID);
 
 };
 #endif

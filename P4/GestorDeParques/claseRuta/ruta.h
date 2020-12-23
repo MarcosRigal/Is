@@ -26,7 +26,7 @@ class Ruta{
 
     public:
 
-    Ruta(int routeParkID, int routeID, string name, string dniMonitor, string dniMonitorAlternate, string modality, int numberOfPlaces, float duration, list<int> idTraversedTrails, bool exclusiveness= false){setRouteParkID(routeParkID); setRouteID(routeID); setName(name); setDniMonitor(dniMonitor); setDniMonitorAlternate(dniMonitorAlternate); setModality(modality); setNumberOfPlaces(numberOfPlaces); setDuration(duration); setTraversedTrails(idTraversedTrails); setExclusiveness(exclusiveness);}
+    Ruta(int routeParkID, int routeID, string name, string dniMonitor, string dniMonitorAlternate, float length, string modality, int numberOfPlaces, float duration, list<int> idTraversedTrails, bool exclusiveness= false){setRouteParkID(routeParkID); setRouteID(routeID); setName(name); setDniMonitor(dniMonitor); setDniMonitorAlternate(dniMonitorAlternate); setLength(length); setModality(modality); setNumberOfPlaces(numberOfPlaces); setDuration(duration); setTraversedTrails(idTraversedTrails); setExclusiveness(exclusiveness);}
     
     inline string getAdaptations() {return adaptations_;}
     inline string getDniMonitor() {return dniMonitor_;}
@@ -39,7 +39,7 @@ class Ruta{
     inline string getName() {return name_;}
     inline int getNumberOfPlaces() {return numberOfPlaces_;}
     inline list<string> getExcursionistDNI() {return excursionistDNI_;}
-    inline int getParkID() {return routeParkID_;}
+    inline int getRouteParkID() {return routeParkID_;}
     inline int getRouteID() {return routeID_;}
     inline list<int> getTraversedTrail() {return idTraversedTrails_;}
 

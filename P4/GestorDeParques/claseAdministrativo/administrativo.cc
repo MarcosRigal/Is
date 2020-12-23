@@ -4,7 +4,7 @@ bool Administrativo::addExcursionistToRoute(list<Ruta> &listOfRoutes, int parkID
 {
    for(auto i = listOfRoutes.begin(); i != listOfRoutes.end(); i++)
    {
-      if (i->getParkID()==parkID && i->getRouteID()==routeID)
+      if (i->getRouteParkID()==parkID && i->getRouteID()==routeID)
       {
          list<string> listOfDni = i->getExcursionistDNI();
          listOfDni.push_back(dni);

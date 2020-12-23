@@ -7,7 +7,7 @@ TEST(Administrativo, addExcursionistToRoute)
    
    list<Ruta> listOfRoutes;//Creamos una lista de rutas
    list<int> traversedTrails = {1,2,3,4,5};//Creamos una lista de senderos atravesados por la ruta
-   Ruta r(1, 1, "Ruta1", "42690761R", "85290310P", "Bicicleta", 70, 2.5, traversedTrails, false);
+   Ruta r(1, 1, "Ruta1", "42690761R", "85290310P", 5.0,"Bicicleta", 70, 2.5, traversedTrails, false);
    listOfRoutes.push_back(r);
 
    Senderista s("30481124Y", "Antonio", "14/03/2001", "Moruno Gracia", 622591804);
